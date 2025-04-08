@@ -7,30 +7,7 @@ const experiences = [
       role: "Werkstudent Software Entwickler",
       period: "Mai 2022 - Present"
     },
-    {
-        logo: "/timerbee.png",
-        name: "Imilia Interactive",
-        role: "Werkstudent Software Entwickler",
-        period: "Mai 2022 - Present"
-      },
-      {
-        logo: "/timerbee.png",
-        name: "Imilia Interactive",
-        role: "Werkstudent Software Entwickler",
-        period: "Mai 2022 - Present"
-      },
-      {
-        logo: "/timerbee.png",
-        name: "Imilia Interactive",
-        role: "Werkstudent Software Entwickler",
-        period: "Mai 2022 - Present"
-      },
-      {
-        logo: "/timerbee.png",
-        name: "Imilia Interactive",
-        role: "Werkstudent Software Entwickler",
-        period: "Mai 2022 - Present"
-      },
+   
     
     
   ];

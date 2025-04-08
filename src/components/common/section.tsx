@@ -5,26 +5,31 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/
 
 interface SectionProps {
     title: string;
-    children: React.ReactNode
+    children: React.ReactNode;
+    moreLink?: boolean
 }
 
-export default function Section({title,children}: SectionProps) {
+export default function Section({title,children, moreLink = true}: SectionProps) {
   return (
     <div className="flex flex-col gap-5 items-start">
         <div className="flex justify-between w-full items-center">
    
         <h4 className="uppercase border border-gray-300 p-1 text-sm rounded-lg font-bold px-4">{title}</h4>
 
-    <Tooltip>
-        <TooltipTrigger asChild>
-            <Link href={''}>
-                <MoveRight size={15}/>
-            </Link>
-        </TooltipTrigger>
-        <TooltipContent>
-        <p>More</p>
-        </TooltipContent>
-    </Tooltip>
+   {
+    moreLink && (
+      <Tooltip>
+      <TooltipTrigger asChild>
+          <Link href={''}>
+              <MoveRight size={15}/>
+          </Link>
+      </TooltipTrigger>
+      <TooltipContent>
+      <p>More</p>
+      </TooltipContent>
+  </Tooltip>
+    )
+   }
 
         </div>
       

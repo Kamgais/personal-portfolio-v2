@@ -4,10 +4,10 @@ import { Button } from "../ui/button"
 
 export default function ProfileSidebar() {
   return (
-   <div className="flex flex-col gap-4  max-w-full h-[90vh]">
-    <div className="bg-white rounded-2xl shadow-xl px-4 py-4 flex flex-col items-center gap-3">
-        <div className="w-[150px] h-[150px]">
-            <img src="/profile.jpeg" alt=""  className=""/>
+   <div className="flex flex-col gap-4  max-w-full xl:h-[90vh]">
+    <div className="bg-white rounded-2xl shadow-xl px-4 py-4 flex xl:flex-col  flex-wrap xl:flex-nowrap items-center gap-3">
+        <div className="xl:w-[150px] xl:h-[150px] w-[100px]">
+            <img src="/profile-pic.png" alt=""  className=""/>
         </div>
         <p className="w-full font-extrabold text-2xl">
             Hello I'm <span className="text-gray-600">
@@ -15,7 +15,7 @@ export default function ProfileSidebar() {
             </span>
         </p>
         <p className="w-full">
-            Software Developer, Content Creator & Writer
+            Software Developer, (Aspiring Devops Engineer), Content Creator & Writer
         </p>
         <div className="self-start flex gap-2 items-center border border-gray-400 p-1 rounded-sm justify-center">
             <BriefcaseBusiness  size={15} color="green" className="animate-pulse"/>
