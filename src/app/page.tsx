@@ -18,25 +18,25 @@ export default function Home() {
     <ProfileSidebar/>
     </div>
       <div className="xl:w-[70%] w-[100%] flex flex-col gap-10  xl:ml-[275px]">
-          <Section title="about">
+          <Section title="about" moreHref="/about">
             <AboutSection/>
           </Section>
-          <Section title="skills">
+          <Section title="skills" moreHref="/skills">
             <SkillsSection/>
           </Section>
-          <Section title="experiences">
+          <Section title="experiences" moreHref="/experiences">
             <ExperienceSection/>
           </Section>
-          <Section title="tech stack">
+          <Section title="tech stack" moreHref="/tech-stack">
             <TechStackSection/>
           </Section>
-          <Section title="projects">
+          <Section title="projects" moreHref="/projects">
             <ProjectsSection/>
           </Section>
-          <Section title="education">
+          <Section title="education" moreHref="/education">
             <EductationSection/>
           </Section>
-          <Section title="certifications">
+          <Section title="certifications" moreHref="/certifications">
             <CertificationsSection/>
           </Section>
           <Section title="links" moreLink={false}>

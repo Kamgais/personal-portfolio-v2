@@ -70,7 +70,7 @@ export default function ContactMeSection() {
       />
       <FormField
         control={form.control}
-        name="name"
+        name="message"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Message</FormLabel>

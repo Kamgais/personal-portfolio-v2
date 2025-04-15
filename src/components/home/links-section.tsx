@@ -49,8 +49,7 @@ export default function LinksSection() {
       {
         links.map((link,index) => (
            <div key={index} 
-           style={{ width: `${Math.floor(Math.random() * 91) + 10}%` }}
-           className={` border bg-white shadow-2xs p-3 flex justify-between items-center rounded-md cursor-pointer`}>
+           className={` w-[200px] border bg-white shadow-2xs p-3 flex justify-between items-center rounded-md cursor-pointer`}>
             <p className="text-[17px] flex gap-2 items-center text-black">
                 {link.icon}
                 {link.label}

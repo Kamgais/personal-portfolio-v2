@@ -6,10 +6,11 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../ui/
 interface SectionProps {
     title: string;
     children: React.ReactNode;
-    moreLink?: boolean
+    moreLink?: boolean;
+    moreHref?: string
 }
 
-export default function Section({title,children, moreLink = true}: SectionProps) {
+export default function Section({title,children, moreLink = true, moreHref}: SectionProps) {
   return (
     <div className="flex flex-col gap-5 items-start">
         <div className="flex justify-between w-full items-center">
@@ -20,7 +21,7 @@ export default function Section({title,children, moreLink = true}: SectionProps)
     moreLink && (
       <Tooltip>
       <TooltipTrigger asChild>
-          <Link href={''}>
+          <Link href={moreHref!}>
               <MoveRight size={15}/>
           </Link>
       </TooltipTrigger>

@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 
-const experiences = [
+const educations = [
     {
         logo: "/thb.png",
         name: "Brandenburg University of Applied Sciences",
@@ -48,7 +48,7 @@ export default function EductationSection() {
   return (
     <div className="w-full flex flex-col gap-4">
       {
-        experiences.map((experience, index) => (
+        educations.map((experience, index) => (
             <div key={index}
             className="flex items-center justify-between w-full border-2 border-dashed  border-gray-300 pr-3 py-2 bg-white shadow-2xs"
             >
