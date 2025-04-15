@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-sm">
+    <div className="min-h-screen mt-5 lg:mt-16 px-0 sm:px-6 lg:px-8 max-w-4xl mx-auto text-sm">
       {/* Header with back button */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center">
@@ -52,7 +52,7 @@ const Projects = () => {
           <ProjectCard 
             title="Portfolio Website"
             description="Personal portfolio website built with React and Tailwind CSS to showcase my skills, experience, and projects."
-            image="/lovable-uploads/4363171d-5fc4-4fe2-85c1-0ef6f0ae2374.png"
+            image="/project-eins.png"
             timeline="April 2025"
             techStack={["React", "TypeScript", "Tailwind CSS", "Shadcn UI"]}
             features={[

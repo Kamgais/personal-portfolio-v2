@@ -1,5 +1,5 @@
 
-import { ArrowLeft, Coffee, Book, Camera, Headphones, Gamepad, Code, Globe, MoveLeft } from "lucide-react";
+import { ArrowLeft, Coffee, Book, Camera, Headphones, Gamepad, Code, Globe, MoveLeft, Lightbulb } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { 
   Carousel,
@@ -20,31 +20,31 @@ const photos = [
     id: 1,
     src: "/image1.jpeg",
     alt: "Professional portrait",
-    caption: "Conference in New York"
+    caption: "Only Good vibes"
   },
   {
     id: 2,
     src: "/image3.jpeg",
     alt: "Nature hiking",
-    caption: "Weekend hiking trip"
+    caption: "Only Good vibes"
   },
   {
     id: 3,
     src: "/image4.jpeg",
     alt: "Traveling abroad",
-    caption: "Exploring new cultures"
+    caption: "Only Good vibes"
   },
   {
     id: 4,
     src: "/image6.jpeg",
     alt: "With pets",
-    caption: "My companion at home"
+    caption: "Only Good vibes"
   },
   {
     id: 5,
     src: "/image9.jpeg",
     alt: "At home",
-    caption: "My cozy reading corner"
+    caption: "Only Good vibes"
   }
 ];
 
@@ -65,7 +65,7 @@ const Index = () => {
       {/* Greeting section */}
       <div className="text-center mb-10">
         <h2 className="text-2xl font-medium mb-10">
-          Hello I'm <span className="text-slate-700">Cyril Kamgais</span>
+          Hello I'm <span className="text-slate-700 text-3xl">Cyril Kamgais</span>
           <span className="inline-block ml-2">👋</span>
         </h2>
 
@@ -122,13 +122,14 @@ const Index = () => {
         {/* Hobbies Section */}
         <div className="py-6">
           <h3 className="text-2xl font-medium mb-6 text-slate-800 border-b border-slate-200 pb-2 inline-block">My Hobbies</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-            <HobbyCard icon={<Coffee />} title="Coffee Enthusiast" description="Exploring artisanal brews and cozy cafés around the city" />
-            <HobbyCard icon={<Book />} title="Reading" description="Fiction, philosophy, and thought-provoking essays" />
-            <HobbyCard icon={<Camera />} title="Photography" description="Capturing moments and finding beauty in the ordinary" />
-            <HobbyCard icon={<Headphones />} title="Music" description="From jazz classics to indie discoveries" />
-            <HobbyCard icon={<Gamepad />} title="Gaming" description="Strategy games and immersive RPGs" />
-            <HobbyCard icon={<Code />} title="Side Projects" description="Building fun tools and experimenting with new tech" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <HobbyCard icon={<Lightbulb />} title="Ideas" description="💡 Exploring new saas ideas and tech companies out there" />
+          <HobbyCard icon={<Book />} title="Reading" description="📚 Fiction, philosophy, and thought-provoking essays" />
+          <HobbyCard icon={<Camera />} title="Photography" description="📸 Capturing moments and finding beauty in the ordinary" />
+          <HobbyCard icon={<Headphones />} title="Music" description="🎧 From jazz classics to indie discoveries" />
+          <HobbyCard icon={<Gamepad />} title="Gaming" description="🎮 Strategy games and immersive RPGs" />
+          <HobbyCard icon={<Code />} title="Side Projects" description="🛠️ Building fun tools and experimenting with new tech" />
+
           </div>
         </div>
 
@@ -157,7 +158,7 @@ const Index = () => {
             <Badge className="bg-green-50 text-green-700 hover:bg-green-100 border border-green-100 py-1.5">Podcasts</Badge>
             <Badge className="bg-yellow-50 text-yellow-700 hover:bg-yellow-100 border border-yellow-100 py-1.5">Documentary films</Badge>
             <Badge className="bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-100 py-1.5">Winter evenings</Badge>
-            <Badge className="bg-red-50 text-red-700 hover:bg-red-100 border border-red-100 py-1.5">Jazz music</Badge>
+            <Badge className="bg-red-50 text-red-700 hover:bg-red-100 border border-red-100 py-1.5">Afro music</Badge>
             <Badge className="bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-100 py-1.5">Street food</Badge>
             <Badge className="bg-pink-50 text-pink-700 hover:bg-pink-100 border border-pink-100 py-1.5">Art museums</Badge>
             <Badge className="bg-teal-50 text-teal-700 hover:bg-teal-100 border border-teal-100 py-1.5">Board games</Badge>

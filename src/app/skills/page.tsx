@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Skills = () => {
   return (
-    <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-sm">
+    <div className="min-h-screen  lg:mt-16 mt-5 px-0 sm:px-6 lg:px-8 max-w-4xl mx-auto text-sm">
       {/* Header with back button */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center">
@@ -44,16 +44,16 @@ const Skills = () => {
             title="Frontend Development" 
             icon="💻"
             description="Building responsive and intuitive user interfaces using modern frameworks and libraries."
-            details="I create seamless user experiences with React, Vue.js and Angular. My focus is on building accessible, performant applications with clean code and attention to detail. I'm proficient in modern CSS techniques including Flexbox, Grid, and CSS-in-JS solutions."
-            badges={["React", "Angular", "JavaScript", "TypeScript", "HTML5/CSS3", "TailwindCSS", "Responsive Design"]}
+            details="I create seamless user experiences with React, and Angular. My focus is on building accessible, performant applications with clean code and attention to detail. I'm proficient in modern CSS techniques including Flexbox, Grid, and CSS-in-JS solutions."
+            badges={["React", "Angular",  "JavaScript", "TypeScript", "HTML5/CSS3", "TailwindCSS", "Responsive Design"]}
           />
           
           <SkillCard 
             title="Backend Development" 
             icon="⚙️"
             description="Developing robust server-side applications and APIs to power web applications."
-            details="I build scalable backend systems using Node.js, Express, and other frameworks. I focus on creating well-structured, maintainable codebases with proper error handling and logging. My applications follow RESTful design principles and modern API best practices."
-            badges={["Node.js", "Express", "REST APIs", "GraphQL", "Authentication", "Server Architecture"]}
+            details="I build scalable backend systems using Node.js, Express, and Spring Boot. I focus on creating well-structured, maintainable codebases with proper error handling and logging. My applications follow RESTful design principles and modern API best practices."
+            badges={["Node.js", "Express", "REST APIs","Spring Boot", "GraphQL", "Authentication", "Server Architecture"]}
           />
           
           <SkillCard 
@@ -77,7 +77,7 @@ const Skills = () => {
             icon="🌐"
             description="Full-stack web development with a focus on modern technologies and frameworks."
             details="I create complete web applications from concept to deployment, integrating frontend and backend systems. I'm experienced with modern web technologies and know how to optimize for performance, accessibility, and SEO."
-            badges={["Full-Stack", "SPA", "PWA", "Web Performance", "Accessibility", "SEO"]}
+            badges={["Full-Stack","Nextjs", "SPA", "PWA", "Web Performance", "Accessibility", "SEO"]}
           />
         </TabsContent>
 
@@ -87,16 +87,16 @@ const Skills = () => {
             title="DevOps" 
             icon="🚀"
             description="Implementing CI/CD pipelines and automating deployment processes."
-            details="I set up and maintain CI/CD pipelines using tools like GitHub Actions and Jenkins. I automate testing, building, and deployment processes to ensure reliable and consistent software delivery. My focus is on reducing manual steps and increasing development velocity."
-            badges={["CI/CD", "GitHub Actions", "Jenkins", "Docker", "Kubernetes", "Automation"]}
+            details="I set up and maintain CI/CD pipelines using tools like GitHub Actions and Gitlab CI/CD. I automate testing, building, and deployment processes to ensure reliable and consistent software delivery. My focus is on reducing manual steps and increasing development velocity."
+            badges={["CI/CD", "GitHub Actions", "Docker", "Terraform", "Automation"]}
           />
           
           <SkillCard 
             title="Cloud Computing" 
             icon="☁️"
             description="Designing and implementing scalable cloud infrastructure on major platforms."
-            details="I work with AWS, Azure, and Google Cloud to create scalable, resilient infrastructure. I design systems that efficiently utilize cloud resources while maintaining cost-effectiveness. I implement infrastructure as code using tools like Terraform and CloudFormation."
-            badges={["AWS", "Azure", "Google Cloud", "Serverless", "IaC", "Cloud Architecture"]}
+            details="I work with AWS to create scalable, resilient infrastructure. I design systems that efficiently utilize cloud resources while maintaining cost-effectiveness. I implement infrastructure as code using tools like Terraform and CloudFormation."
+            badges={["AWS",  "Serverless", "IaC", "Cloud Architecture"]}
           />
           
           <SkillCard 
@@ -122,8 +122,8 @@ const Skills = () => {
             title="SQL Databases" 
             icon="📊"
             description="Working with relational databases to store and retrieve structured data."
-            details="I work with PostgreSQL, MySQL, and SQL Server to build and maintain transactional database systems. I write complex SQL queries, stored procedures, and triggers. I focus on data integrity, performance, and security."
-            badges={["PostgreSQL", "MySQL", "MS SQL Server", "ACID Compliance", "Transactions", "Normalization"]}
+            details="I work with PostgreSQL, MySQL, and MariaDB to build and maintain transactional database systems. I write complex SQL queries, stored procedures, and triggers. I focus on data integrity, performance, and security."
+            badges={["PostgreSQL", "MySQL", "MariaDB", "ACID Compliance", "Transactions", "Normalization"]}
           />
           
           <SkillCard 
@@ -131,7 +131,7 @@ const Skills = () => {
             icon="📄"
             description="Utilizing non-relational databases for flexible, scalable data storage."
             details="I implement MongoDB, Redis, and other NoSQL solutions for scenarios that benefit from flexible schemas and horizontal scaling. I understand data modeling approaches for document, key-value, and graph databases."
-            badges={["MongoDB", "Redis", "DynamoDB", "Document Stores", "Key-Value Databases", "Graph Databases"]}
+            badges={["MongoDB", "Redis"]}
           />
         </TabsContent>
       </Tabs>
@@ -157,9 +157,9 @@ const SkillCard = ({
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-md">
       <CardContent className="p-6">
         <div className="flex items-start space-x-4">
-          <div className="text-3xl" aria-hidden="true">{icon}</div>
+          <div className="text-3xl md:block hidden" aria-hidden="true">{icon}</div>
           <div className="flex-1">
-            <h3 className="text-xl font-medium text-slate-800 mb-2">{title}</h3>
+            <h3 className="text-xl font-medium text-slate-800 mb-2 ">{title}</h3>
             <p className="text-slate-600 mb-4">{description}</p>
             <div className="text-sm text-slate-700 bg-slate-50 p-4 rounded-md mb-4 leading-relaxed">
               {details}

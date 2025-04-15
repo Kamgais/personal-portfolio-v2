@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Experience = () => {
   return (
-    <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-sm">
+    <div className="min-h-screen  mt-5 lg:mt-16 px-0 sm:px-6 lg:px-8 max-w-4xl mx-auto text-sm">
       {/* Header with back button */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center">
@@ -31,19 +31,19 @@ const Experience = () => {
       {/* Experience Card */}
       <div className="max-w-3xl mx-auto space-y-6">
         <ExperienceCard 
-          company="Imilia Interactive Gmbh"
+          company="Imilia Interactive Mobile Applications GmbH"
           role="Werkstudent Software Entwickler"
           period="Mai 2022 - Present"
           logo="/timerbee.png"
-          description="Working as a software developer at Imilia Interactive, contributing to enterprise web applications using Angular for frontend and Spring Boot for backend development."
+          description="Working as a Software Developer at Imilia GmbH, contributing to the development of Timerbee—a multi-resource management system for healthcare providers—utilizing Angular for frontend and Spring Boot for backend development."
           responsibilities={[
-            "Developed and maintained enterprise web applications using Angular framework",
-            "Implemented RESTful APIs with Spring Boot backend services",
-            "Created responsive and interactive user interfaces",
-            "Integrated frontend applications with backend microservices",
-            "Implemented state management using RxJS and Angular services",
-            "Wrote unit and integration tests for frontend and backend components",
-            "Collaborated with cross-functional teams to deliver high-quality software solutions"
+            "Contributed to the ongoing development and feature enhancement of Timerbee, a healthcare resource management platform",
+            "Designed and built the License Management App (LMA) for Timerbee, enabling internal teams to manage customer licenses efficiently",
+            "Developed responsive and interactive UI components using the Angular framework",
+            "Implemented and maintained RESTful APIs using Spring Boot, supporting scheduling, licensing, and workflow automation",
+            "Managed complex application state with RxJS and Angular services",
+            "Wrote unit and integration tests to ensure code quality and application stability",
+            "Collaborated with cross-functional teams, including product managers and devops engineers, to deliver features tailored to user needs"
           ]}
           technologies={[
             "Angular", 
@@ -51,10 +51,17 @@ const Experience = () => {
             "Spring Boot", 
             "Java", 
             "RxJS", 
-            "REST APIs", 
-            "Microservices", 
+            "Gitlab CI", 
+            "Docker", 
             "Git", 
-            "Agile Development"
+            "Agile Development",
+            "Jira",
+            "Confluence",
+            "Slack",
+            "VSCode",
+            "Eclipse",
+            "Sourcetree",
+            "Gitlab"
           ]}
         />
       </div>
