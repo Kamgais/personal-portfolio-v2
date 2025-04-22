@@ -164,19 +164,19 @@ const Education = () => {
             <li className="flex items-start">
               <div className="mr-2 mt-1 text-amber-500">•</div>
               <div>
-                <span className="font-medium">Best Group Project Award</span> - Developed a full-stack web application for course management that earned recognition for innovative features and clean architecture
+                <span className="font-medium">Bachelor's degree</span> - Successfully completed a Bachelor’s degree in Computer Science with a specialization in Cloud Computing at THB (Technische Hochschule Brandenburg).
               </div>
             </li>
             <li className="flex items-start">
               <div className="mr-2 mt-1 text-amber-500">•</div>
               <div>
-                <span className="font-medium">DAAD Scholarship Recipient</span> - Received a prestigious scholarship from the German Academic Exchange Service for academic excellence
+                <span className="font-medium">Academic Projects</span> - Completed several practical projects during the program, focusing on software engineering, programming, cybersecurity, and cloud infrastructure, both individually and in teams.
               </div>
             </li>
             <li className="flex items-start">
               <div className="mr-2 mt-1 text-amber-500">•</div>
               <div>
-                <span className="font-medium">Dean's List</span> - Recognized for maintaining a high GPA throughout undergraduate studies
+                <span className="font-medium">Skills</span> - Graduated with strong performance in core areas such as software development, programming, IT security, cloud architecture, DevOps, and distributed systems.
               </div>
             </li>
           </ul>

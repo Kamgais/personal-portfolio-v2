@@ -1,7 +1,4 @@
-import Link from "next/link"
-import { Button } from "../ui/button"
 import { ArrowUpRight, Github, Globe, Linkedin, Mail, MessageCircleMore, Youtube } from "lucide-react"
-import { cn } from "@/lib/utils";
 
 
 const links = [

@@ -25,6 +25,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.55.0",
+    "sanity": "^3.85.1",
+    "styled-components": "^6.1.17",
     "tailwind-merge": "^3.1.0",
     "tw-animate-css": "^1.2.5",
     "zod": "^3.24.2"
