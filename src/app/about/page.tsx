@@ -65,7 +65,7 @@ const Index = () => {
       {/* Greeting section */}
       <div className="text-center mb-10">
         <h2 className="text-2xl font-medium mb-10">
-          Hello I'm <span className="text-slate-700 text-3xl">Cyril Kamgais</span>
+          Hello I&apos;m <span className="text-slate-700 text-3xl">Cyril Kamgais</span>
           <span className="inline-block ml-2">👋</span>
         </h2>
 
