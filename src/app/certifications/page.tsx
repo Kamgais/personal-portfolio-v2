@@ -1,12 +1,22 @@
-import { ArrowLeft, Award, Calendar, BookText, BadgeCheck, Filter, MoveLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Award, Calendar, BookText, BadgeCheck, Filter, MoveLeft } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
+
+interface Certification {
+  logo: string;
+  name: string;
+  issuer: string;
+  date: string;
+  category: string;
+  credential: string;
+  skills: string[]
+}
+
 const Certifications = () => {
-  const certifications = [
+  const certifications: Certification[] = [
     {
       logo: "/aws-certified.png",
       name: "AWS Certified Solutions Architect",
@@ -101,7 +111,7 @@ const Certifications = () => {
             About My Certifications
           </h2>
           <p className="text-gray-700">
-            Throughout my professional journey, I've pursued certifications that enhance my skills and validate my expertise in various domains. 
+            Throughout my professional journey, I&apos;ve pursued certifications that enhance my skills and validate my expertise in various domains. 
             These certifications represent my commitment to continuous learning and professional development in cloud technologies, 
             software development methodologies, and specialized technical skills.
           </p>
@@ -191,7 +201,7 @@ const Certifications = () => {
   );
 };
 
-const CertificationCard = ({ certification }: { certification: any }) => {
+const CertificationCard = ({ certification }: { certification: Certification }) => {
   return (
     <Card className="transition-all hover:shadow-md">
       <CardHeader className="flex flex-row items-center gap-4">

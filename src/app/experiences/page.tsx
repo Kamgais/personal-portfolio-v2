@@ -24,7 +24,7 @@ const Experience = () => {
         </h2>
         <p className="text-slate-600 max-w-2xl mx-auto">
           My professional experience has shaped my expertise in software development.
-          Below you'll find details about my work history and contributions.
+          Below you&apos;ll find details about my work history and contributions.
         </p>
       </div>
 

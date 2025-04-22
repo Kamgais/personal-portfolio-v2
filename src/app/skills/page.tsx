@@ -26,7 +26,7 @@ const Skills = () => {
         </h2>
         <p className="text-slate-600 max-w-2xl mx-auto">
           I specialize in a diverse range of technical skills, with particular expertise in web
-          development and database management. Below you'll find my key areas of proficiency.
+          development and database management. Below you&apos;ll find my key areas of proficiency.
         </p>
       </div>
 

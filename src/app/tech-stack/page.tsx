@@ -24,7 +24,7 @@ const TechStack = () => {
         </h2>
         <p className="text-slate-600 max-w-2xl mx-auto">
           My technical toolkit encompasses a wide range of technologies across frontend, backend, databases, and DevOps.
-          Here's a comprehensive view of the technologies I work with and their roles in my development process.
+          Here&apos;s a comprehensive view of the technologies I work with and their roles in my development process.
         </p>
       </div>
 

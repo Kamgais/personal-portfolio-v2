@@ -1,6 +1,5 @@
 
-import { ArrowLeft, GraduationCap, Calendar, School, Award, BookOpen, MoveLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { GraduationCap, Calendar, School, Award, BookOpen, MoveLeft } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
@@ -164,7 +163,7 @@ const Education = () => {
             <li className="flex items-start">
               <div className="mr-2 mt-1 text-amber-500">•</div>
               <div>
-                <span className="font-medium">Bachelor's degree</span> - Successfully completed a Bachelor’s degree in Computer Science with a specialization in Cloud Computing at THB (Technische Hochschule Brandenburg).
+                <span className="font-medium">Bachelor's degree</span> - Successfully completed a Bachelor&apos;s degree in Computer Science with a specialization in Cloud Computing at THB (Technische Hochschule Brandenburg).
               </div>
             </li>
             <li className="flex items-start">

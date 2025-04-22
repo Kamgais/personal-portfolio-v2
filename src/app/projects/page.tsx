@@ -1,5 +1,5 @@
 
-import { ArrowLeft, ArrowRight, Github, Globe, Code, Calendar, BriefcaseIcon, GraduationCap, User, MoveLeft } from "lucide-react";
+import { Github, Globe,  Calendar, BriefcaseIcon, GraduationCap, User, MoveLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -25,7 +25,7 @@ const Projects = () => {
           Personal, Academic & Client Projects
         </h2>
         <p className="text-slate-600 max-w-2xl mx-auto">
-          Below are some of the key projects I've worked on, showcasing my skills and experience
+          Below are some of the key projects I&apos;ve worked on, showcasing my skills and experience
           in web development and software engineering across different domains.
         </p>
       </div>

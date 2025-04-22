@@ -1,5 +1,5 @@
 
-import { ArrowLeft, Coffee, Book, Camera, Headphones, Gamepad, Code, Globe, MoveLeft, Lightbulb } from "lucide-react";
+import {  Book, Camera, Headphones, Gamepad, Code, Globe, MoveLeft, Lightbulb } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { 
   Carousel,
@@ -82,8 +82,8 @@ const Index = () => {
       {/* About Me Content */}
       <div className="max-w-2xl mx-auto space-y-8 text-sm text-slate-700">
         <p className="leading-relaxed">
-          <span className="inline-block mr-1">👋</span> Hey there! I'm Cyril, a curious soul with a passion for creativity and exploration. 
-          When I'm not immersed in the digital world, I find joy in simple pleasures and meaningful connections.
+          <span className="inline-block mr-1">👋</span> Hey there! I&apos;m Cyril, a curious soul with a passion for creativity and exploration. 
+          When I&apos;m not immersed in the digital world, I find joy in simple pleasures and meaningful connections.
         </p>
 
         {/* Photo Gallery Section */}
@@ -96,7 +96,7 @@ const Index = () => {
              
             >
               <CarouselContent>
-                {photos.map((photo, index) => (
+                {photos.map((photo) => (
                   <CarouselItem key={photo.id}>
                     <Card className="border-none shadow-none">
                       <CardContent className="p-0">
@@ -138,7 +138,7 @@ const Index = () => {
           <h3 className="text-2xl font-medium mb-6 text-slate-800 border-b border-slate-200 pb-2 inline-block">More About Me</h3>
           <div className="space-y-4">
             <p className="leading-relaxed">
-              I'm a firm believer in continuous learning and personal growth. Weekends often find me hiking local trails, 
+              I&apos;m a firm believer in continuous learning and personal growth. Weekends often find me hiking local trails, 
               experimenting with new recipes, or losing track of time in bookstores.
             </p>
             <p className="leading-relaxed">
@@ -167,7 +167,7 @@ const Index = () => {
 
         {/* Connect Section */}
         <div className="py-10 text-center">
-          <p className="italic mb-5 text-slate-600">Let's connect and share stories!</p>
+          <p className="italic mb-5 text-slate-600">Let&apos;s connect and share stories!</p>
           <div className="inline-flex items-center px-4 py-2 bg-slate-50 rounded-full border border-slate-200 hover:border-blue-200 hover:bg-blue-50 transition-all duration-300">
             <Globe className="h-5 w-5 mr-2 text-blue-500" />
             <span className="text-blue-500 font-medium">cyrilkamgais.com</span>

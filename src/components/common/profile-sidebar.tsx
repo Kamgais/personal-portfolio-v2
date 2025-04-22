@@ -10,7 +10,7 @@ export default function ProfileSidebar() {
             <img src="/profile-pic.png" alt=""  className=""/>
         </div>
         <p className="w-full font-extrabold text-2xl">
-            Hello I'm <span className="text-gray-600">
+            Hello I&apos;m <span className="text-gray-600">
             Cyril Kamgais👋
             </span>
         </p>
