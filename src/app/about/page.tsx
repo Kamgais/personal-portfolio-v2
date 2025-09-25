@@ -148,14 +148,14 @@ const About = () => {
                                 className="object-cover w-full h-full transition-all duration-300 hover:scale-105"
                               />
                             </AspectRatio>
-                            <p className="text-center text-sm text-slate-600 mt-3 font-medium">{photo.caption}</p>
+                            <p className="text-center text-sm text-slate-600 dark:text-gray-400 mt-3 font-medium transition-colors duration-300">{photo.caption}</p>
                           </CardContent>
                         </Card>
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="left-2 bg-white/80 backdrop-blur-sm" />
-                  <CarouselNext className="right-2 bg-white/80 backdrop-blur-sm" />
+                  <CarouselPrevious className="left-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm transition-colors duration-300" />
+                  <CarouselNext className="right-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm transition-colors duration-300" />
                 </Carousel>
               </div>
             </CardContent>
@@ -164,13 +164,13 @@ const About = () => {
 
         {/* Hobbies Section */}
         <div className="mb-16">
-          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-colors duration-300">
             <CardContent className="p-8">
               <div className="flex items-center mb-8">
-                <div className="p-2 bg-green-100 rounded-lg mr-3">
-                  <Heart className="h-5 w-5 text-green-600" />
+                <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg mr-3 transition-colors duration-300">
+                  <Heart className="h-5 w-5 text-green-600 dark:text-green-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">My Hobbies</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-gray-100 transition-colors duration-300">My Hobbies</h3>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -187,29 +187,29 @@ const About = () => {
 
         {/* More About Me Section */}
         <div className="mb-16">
-          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-colors duration-300">
             <CardContent className="p-8">
               <div className="flex items-center mb-8">
-                <div className="p-2 bg-blue-100 rounded-lg mr-3">
-                  <User className="h-5 w-5 text-blue-600" />
+                <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg mr-3 transition-colors duration-300">
+                  <User className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">More About Me</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-gray-100 transition-colors duration-300">More About Me</h3>
               </div>
               
               <div className="space-y-6 max-w-3xl">
-                <div className="border-l-4 border-blue-200 pl-6">
-                  <p className="text-slate-700 leading-relaxed">
+                <div className="border-l-4 border-blue-200 dark:border-blue-800 pl-6">
+                  <p className="text-slate-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">
                     I&apos;m a firm believer in continuous learning and personal growth. Weekends often find me hiking local trails, 
                     experimenting with new recipes, or losing track of time in bookstores.
                   </p>
                 </div>
-                <div className="border-l-4 border-purple-200 pl-6">
-                  <p className="text-slate-700 leading-relaxed">
+                <div className="border-l-4 border-purple-200 dark:border-purple-800 pl-6">
+                  <p className="text-slate-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">
                     I enjoy meaningful conversations over good food and dream of traveling to experience diverse cultures around the world.
                   </p>
                 </div>
-                <div className="border-l-4 border-green-200 pl-6">
-                  <p className="text-slate-700 leading-relaxed">
+                <div className="border-l-4 border-green-200 dark:border-green-800 pl-6">
+                  <p className="text-slate-700 dark:text-gray-300 leading-relaxed transition-colors duration-300">
                     My philosophy is simple: stay curious, be kind, and find joy in the journey rather than just the destination.
                   </p>
                 </div>
@@ -220,13 +220,13 @@ const About = () => {
 
         {/* Things I Love Section */}
         <div className="mb-16">
-          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-colors duration-300">
             <CardContent className="p-8">
               <div className="flex items-center mb-8">
-                <div className="p-2 bg-red-100 rounded-lg mr-3">
-                  <Heart className="h-5 w-5 text-red-600" />
+                <div className="p-2 bg-red-100 dark:bg-red-900/30 rounded-lg mr-3 transition-colors duration-300">
+                  <Heart className="h-5 w-5 text-red-600 dark:text-red-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Things I Love</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-gray-100 transition-colors duration-300">Things I Love</h3>
               </div>
               
               <div className="flex flex-wrap gap-3">
@@ -245,12 +245,12 @@ const About = () => {
 
         {/* Connect Section */}
         <div className="text-center">
-          <Card className="overflow-hidden border-0 shadow-lg bg-gradient-to-r from-slate-900 to-slate-800">
+          <Card className="overflow-hidden border-0 shadow-lg bg-gradient-to-r from-slate-900 to-slate-800 dark:from-gray-800 dark:to-gray-900 transition-colors duration-300">
             <CardContent className="p-8">
-              <p className="text-slate-300 mb-6 text-lg">Let&apos;s connect and share stories!</p>
-              <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <Globe className="h-5 w-5 mr-3 text-blue-400" />
-                <span className="text-blue-400 font-medium">cyrilkamgais.com</span>
+              <p className="text-slate-300 dark:text-gray-400 mb-6 text-lg transition-colors duration-300">Let&apos;s connect and share stories!</p>
+              <div className="inline-flex items-center px-6 py-3 bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-full border border-white/20 dark:border-white/10 hover:bg-white/20 dark:hover:bg-white/10 transition-all duration-300">
+                <Globe className="h-5 w-5 mr-3 text-blue-400 dark:text-blue-300" />
+                <span className="text-blue-400 dark:text-blue-300 font-medium">cyrilkamgais.com</span>
               </div>
             </CardContent>
           </Card>
@@ -263,12 +263,12 @@ const About = () => {
 // Hobby Card Component with modern design
 const HobbyCard = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) => {
   return (
-    <div className="bg-gradient-to-br from-white to-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg hover:border-slate-300 transition-all duration-300 group">
-      <div className="text-slate-600 mb-4 group-hover:text-blue-600 transition-colors duration-300 transform group-hover:scale-110">
+    <div className="bg-gradient-to-br from-white to-slate-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl border border-slate-200 dark:border-gray-600 hover:shadow-lg hover:border-slate-300 dark:hover:border-gray-500 transition-all duration-300 group">
+      <div className="text-slate-600 dark:text-gray-300 mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300 transform group-hover:scale-110">
         {icon}
       </div>
-      <h4 className="font-semibold text-slate-800 mb-2 text-lg">{title}</h4>
-      <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+      <h4 className="font-semibold text-slate-800 dark:text-gray-200 mb-2 text-lg transition-colors duration-300">{title}</h4>
+      <p className="text-sm text-slate-600 dark:text-gray-400 leading-relaxed transition-colors duration-300">{description}</p>
     </div>
   );
 };

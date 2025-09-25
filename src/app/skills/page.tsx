@@ -7,16 +7,16 @@ import Link from "next/link";
 
 const Skills = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       {/* Header */}
-      <div className="bg-white/80 backdrop-blur-sm border-b border-slate-200/60 sticky top-0 z-10">
+      <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-slate-200/60 dark:border-gray-700/60 sticky top-0 z-10 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center">
             <Link 
               href="/" 
-              className="group flex items-center text-slate-600 hover:text-slate-900 transition-colors duration-200"
+              className="group flex items-center text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-gray-200 transition-colors duration-200"
             >
-              <div className="p-2 rounded-full group-hover:bg-slate-100 transition-colors duration-200">
+              <div className="p-2 rounded-full group-hover:bg-slate-100 dark:group-hover:bg-gray-800 transition-colors duration-200">
                 <MoveLeft size={18}/>
               </div>
               <span className="ml-2 font-medium">Back</span>
@@ -28,14 +28,14 @@ const Skills = () => {
       {/* Hero Section */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 text-green-700 text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium mb-6 transition-colors duration-300">
             <Code className="w-4 h-4 mr-2" />
             Technical Skills
           </div>
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">
+          <h1 className="text-4xl font-bold text-slate-900 dark:text-gray-100 mb-4 transition-colors duration-300">
             Professional Competencies
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed transition-colors duration-300">
             I specialize in a diverse range of technical skills, with particular expertise in web
             development, cloud infrastructure, and database management.
           </p>
@@ -43,7 +43,7 @@ const Skills = () => {
 
         {/* Skills Tabs */}
         <div className="relative">
-          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-colors duration-300">
             <CardContent className="p-8">
               <Tabs defaultValue="development" className="w-full">
                 <TabsList className="grid w-full grid-cols-3 mb-8 bg-slate-100 p-1 rounded-xl">
@@ -77,7 +77,7 @@ const Skills = () => {
                     icon="💻"
                     iconColor="blue"
                     description="Building responsive and intuitive user interfaces using modern frameworks and libraries."
-                    details="I create seamless user experiences with React, and Angular. My focus is on building accessible, performant applications with clean code and attention to detail. I'm proficient in modern CSS techniques including Flexbox, Grid, and CSS-in-JS solutions."
+                    details="I create seamless user experiences with React, and Angular. My focus is on building accessible, performant applications with clean code and attention to detail. I&apos;m proficient in modern CSS techniques including Flexbox, Grid, and CSS-in-JS solutions."
                     badges={["React", "Angular", "JavaScript", "TypeScript", "HTML5/CSS3", "TailwindCSS", "Responsive Design"]}
                   />
                   
@@ -113,7 +113,7 @@ const Skills = () => {
                     icon="🌐"
                     iconColor="cyan"
                     description="Full-stack web development with a focus on modern technologies and frameworks."
-                    details="I create complete web applications from concept to deployment, integrating frontend and backend systems. I'm experienced with modern web technologies and know how to optimize for performance, accessibility, and SEO."
+                    details="I create complete web applications from concept to deployment, integrating frontend and backend systems. I&apos;m experienced with modern web technologies and know how to optimize for performance, accessibility, and SEO."
                     badges={["Full-Stack", "Next.js", "SPA", "PWA", "Web Performance", "Accessibility", "SEO"]}
                   />
                 </TabsContent>
@@ -143,7 +143,7 @@ const Skills = () => {
                     icon="🔄"
                     iconColor="green"
                     description="Managing source code with advanced Git workflows and best practices."
-                    details="I implement effective Git workflows including branching strategies, code reviews, and release management. I'm experienced with GitFlow and trunk-based development approaches, and I help teams establish sustainable version control practices."
+                    details="I implement effective Git workflows including branching strategies, code reviews, and release management. I&apos;m experienced with GitFlow and trunk-based development approaches, and I help teams establish sustainable version control practices."
                     badges={["Git", "GitHub", "GitLab", "Branching Strategies", "Code Reviews", "Release Management"]}
                   />
                 </TabsContent>
@@ -155,7 +155,7 @@ const Skills = () => {
                     icon="🗃️"
                     iconColor="purple"
                     description="Creating efficient database schemas and optimizing database performance."
-                    details="I design normalized database schemas with proper relationships and constraints. I optimize queries and database structure for performance and implement proper indexing strategies. I'm experienced with migrations, backups, and database maintenance tasks."
+                    details="I design normalized database schemas with proper relationships and constraints. I optimize queries and database structure for performance and implement proper indexing strategies. I&apos;m experienced with migrations, backups, and database maintenance tasks."
                     badges={["Database Architecture", "Schema Design", "Query Optimization", "Indexing", "Migrations"]}
                   />
                   

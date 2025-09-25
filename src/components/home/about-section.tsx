@@ -1,44 +1,37 @@
-
-export default function AboutSection() {
+﻿export default function AboutSection() {
   return (
-    <div className="flex flex-col gap-4 sm:gap-5">
-      <p className="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-200 transition-colors duration-300">
-        👋 <span className="font-medium">Hey there!</span> I'm Cyril Kamgais, a 
-        <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 text-white font-semibold px-2 py-1 mx-2 text-xs sm:text-sm rounded-md shadow-sm">
-          Full-Stack Developer
-        </span> 
-        who transforms ideas into digital reality ✨
-      </p>
-      
-      <p className="text-sm sm:text-base leading-relaxed">
-        I craft seamless experiences across the entire stack — from pixel-perfect 
-        <span className="bg-blue-100 text-blue-700 font-medium px-2 py-0.5 mx-1 text-xs sm:text-sm rounded-full">
-          frontend
-        </span> 
-        interfaces to robust 
-        <span className="bg-green-100 text-green-700 font-medium px-2 py-0.5 mx-1 text-xs sm:text-sm rounded-full">
-          backend
-        </span> 
-        architectures. Every line of code is written with purpose 🎯
-      </p>
+    <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="space-y-4">
+        {/* Introduction */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+            👋 Hey there! I am Cyril Kamgais
+          </h3>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            A passionate <span className="font-semibold text-blue-600 dark:text-blue-400">Full-Stack Developer</span> with a knack for building scalable and user-friendly web applications. With a strong foundation in both <span className="font-semibold text-blue-600 dark:text-blue-400">frontend</span> and <span className="font-semibold text-green-600 dark:text-green-400">backend</span> technologies, I love turning complex problems into simple, beautiful, and intuitive solutions.
+          </p>
+        </div>
 
-      <p className="text-sm sm:text-base leading-relaxed">
-        My toolkit includes 
-        <span className="bg-gradient-to-r from-gray-800 to-gray-600 text-white font-medium px-2 py-0.5 mx-1 text-xs sm:text-sm rounded-md">
-          React • Next.js • Node.js • MongoDB
-        </span>
-        — but I'm always evolving, always learning �. I believe in building not just applications, but digital experiences that matter.
-      </p>
+        {/* What I Do */}
+        <div>
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+            I specialize in <span className="font-semibold text-blue-600 dark:text-blue-400">React, Next.js, Node.js, and MongoDB</span> but I am always exploring new technologies to stay ahead of the curve. Whether it is creating dynamic user interfaces or designing robust APIs, I thrive on crafting seamless digital experiences.
+          </p>
+        </div>
 
-      <p className="text-sm sm:text-base leading-relaxed text-gray-600">
-        When I'm not in the zone coding 🚀, you'll find me exploring cutting-edge tech, contributing to open-source communities �, or diving deep into the latest development trends.
-      </p>
+        {/* Personal Touch */}
+        <div className="pt-2 border-t border-gray-200 dark:border-gray-600">
+          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            When I am not coding, you will find me experimenting with new tech, contributing to open-source projects, or binge-watching tech tutorials on YouTube.
+          </p>
+        </div>
 
-      <div className="mt-2 p-4 bg-gradient-to-r from-blue-50 to-purple-50 border-l-4 border-blue-400 rounded-r-lg">
-        <p className="text-sm sm:text-base font-medium text-gray-800">
-          Ready to build something extraordinary together? Let's make it happen! 
-          <span className="inline-block ml-1 animate-bounce">🚀</span>
-        </p>
+        {/* Call to Action */}
+        <div className="text-center pt-2">
+          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+            Let&apos;s build something amazing together! 🚀
+          </p>
+        </div>
       </div>
     </div>
   )

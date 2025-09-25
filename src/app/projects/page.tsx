@@ -9,16 +9,16 @@ import Image from "next/image";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-slate-50/20 to-blue-50/10 relative">
+    <div className="min-h-screen bg-gradient-to-br from-white via-slate-50/20 to-blue-50/10 dark:from-gray-900 dark:via-gray-900/90 dark:to-blue-950/20 relative transition-colors duration-300">
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.02)_0%,transparent_50%)] pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.02)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_70%_30%,rgba(147,197,253,0.03)_0%,transparent_50%)] pointer-events-none"></div>
       
       {/* Sticky Header */}
-      <header className="sticky top-0 z-50 border-b border-slate-200/40 backdrop-blur-lg bg-white/90 shadow-sm">
+      <header className="sticky top-0 z-50 border-b border-slate-200/40 dark:border-gray-700/40 backdrop-blur-lg bg-white/90 dark:bg-gray-900/90 shadow-sm transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors group"
+            className="inline-flex items-center gap-2 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-gray-200 transition-colors group"
           >
             <MoveLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             <span className="text-sm font-medium">Back to Home</span>
@@ -29,23 +29,23 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 text-sm font-medium mb-6 transition-colors duration-300">
             <FolderOpen className="w-4 h-4" />
             Projects Portfolio
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-gray-100 mb-6 transition-colors duration-300">
             My Projects
           </h1>
           
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed transition-colors duration-300">
             A collection of personal, academic, and client projects showcasing my skills 
             in web development, software engineering, and problem-solving across different domains.
           </p>
         </div>
 
         <div className="space-y-8">
-          <Card className="backdrop-blur-sm bg-white/70 border-white/20 shadow-xl">
+          <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-white/20 dark:border-gray-700/40 shadow-xl transition-colors duration-300">
             <CardContent className="p-8">
               <Tabs defaultValue="personal" className="w-full">
                 <TabsList className="grid grid-cols-3 mb-8 w-full h-12">

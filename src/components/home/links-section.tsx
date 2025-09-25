@@ -63,7 +63,7 @@ export default function LinksSection() {
       {/* Header */}
       <div className="text-center">
         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2 transition-colors duration-300">
-          Let's Connect! <span className="animate-pulse">✨</span>
+          Let&apos;s Connect! <span className="animate-pulse">✨</span>
         </h3>
         <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors duration-300">
           Choose your preferred way to reach out
@@ -107,7 +107,7 @@ export default function LinksSection() {
       <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-2 border-dashed border-blue-200 dark:border-blue-800 rounded-xl text-center transition-all duration-300">
         <p className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors duration-300">
           <span className="inline-block mr-1 animate-bounce">🚀</span>
-          Ready to collaborate? I'm just one click away!
+          Ready to collaborate? I&apos;m just one click away!
           <span className="inline-block ml-1 animate-bounce delay-100">✨</span>
         </p>
       </div>

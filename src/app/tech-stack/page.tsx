@@ -151,7 +151,7 @@ const TechStack = () => {
                     docsLink="https://developer.mozilla.org/de/docs/Web/CSS"
                     icon="https://img.icons8.com/color/96/000000/css3.png"
                     description="The styling language that transforms plain HTML into visually appealing interfaces."
-                    details="I leverage CSS3 to create responsive, visually consistent designs across devices. I implement modern techniques including Flexbox, Grid, and animations to create polished user experiences. I'm skilled at optimizing CSS for performance and maintainability."
+                    details="I leverage CSS3 to create responsive, visually consistent designs across devices. I implement modern techniques including Flexbox, Grid, and animations to create polished user experiences. I&apos;m skilled at optimizing CSS for performance and maintainability."
                   />
                   
                   <TechCard 
@@ -159,7 +159,7 @@ const TechStack = () => {
                     docsLink="https://www.javascriptcheatsheet.org/"
                     icon="https://img.icons8.com/color/96/000000/javascript.png"
                     description="The programming language of the web that brings interactivity and dynamic behavior to applications."
-                    details="I use JavaScript to create interactive web experiences, handling user interactions, manipulating the DOM, and implementing complex front-end logic. I'm proficient with modern ES6+ features, asynchronous programming patterns, and browser APIs."
+                    details="I use JavaScript to create interactive web experiences, handling user interactions, manipulating the DOM, and implementing complex front-end logic. I&apos;m proficient with modern ES6+ features, asynchronous programming patterns, and browser APIs."
                   />
                   
                   <TechCard 
@@ -178,7 +178,7 @@ const TechStack = () => {
                     docsLink="https://react.dev/"
                     icon="https://img.icons8.com/color/96/000000/react-native.png"
                     description="A JavaScript library for building user interfaces with a component-based architecture."
-                    details="I build scalable frontend applications using React's component model and virtual DOM. I'm experienced with React hooks, context API, and state management patterns to create maintainable, performant interfaces that provide excellent user experiences."
+                    details="I build scalable frontend applications using React&apos;s component model and virtual DOM. I&apos;m experienced with React hooks, context API, and state management patterns to create maintainable, performant interfaces that provide excellent user experiences."
                   />
                   
                   <TechCard 
@@ -210,7 +210,7 @@ const TechStack = () => {
                     docsLink="https://redux.js.org/"
                     icon="https://img.icons8.com/color/96/000000/redux.png"
                     description="A predictable state container for JavaScript apps, commonly used with React."
-                    details="I implement Redux for centralized state management in complex applications, using actions, reducers, and the store pattern. I'm experienced with Redux middleware like Redux Thunk and Redux Saga for handling asynchronous operations and side effects."
+                    details="I implement Redux for centralized state management in complex applications, using actions, reducers, and the store pattern. I&apos;m experienced with Redux middleware like Redux Thunk and Redux Saga for handling asynchronous operations and side effects."
                   />
                 </TabsContent>
 
