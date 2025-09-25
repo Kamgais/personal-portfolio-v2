@@ -1,5 +1,5 @@
 
-import { MoveLeft, Code, Server, Database, Zap, Wrench, Star } from "lucide-react";
+import { MoveLeft, Code, Server, Database, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

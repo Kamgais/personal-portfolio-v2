@@ -220,9 +220,9 @@ const Education = () => {
                 <div className="flex items-start gap-4 p-4 rounded-lg bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200">
                   <div className="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-2">Bachelor's Degree Excellence</h3>
+                    <h3 className="font-semibold text-slate-900 mb-2">Bachelor&apos;s Degree Excellence</h3>
                     <p className="text-slate-700 text-sm leading-relaxed">
-                      Successfully completed a Bachelor's degree in Computer Science with specialization in Cloud Computing 
+                      Successfully completed a Bachelor&apos;s degree in Computer Science with specialization in Cloud Computing 
                       at Brandenburg University of Applied Sciences, demonstrating strong academic performance.
                     </p>
                   </div>

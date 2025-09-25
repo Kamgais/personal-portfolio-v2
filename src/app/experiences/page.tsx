@@ -3,6 +3,7 @@ import { Calendar, BriefcaseIcon, MoveLeft, MapPin, Building2 } from "lucide-rea
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 const Experience = () => {
   return (
@@ -184,9 +185,11 @@ const ExperienceCard = ({
           <div className="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-8">
             <div className="flex items-start space-x-6">
               <div className="w-16 h-16 relative rounded-2xl overflow-hidden border-2 border-white/20 bg-white flex-shrink-0 shadow-lg">
-                <img 
+                <Image 
                   src={logo} 
                   alt={`${company} logo`} 
+                  width={64}
+                  height={64}
                   className="object-contain absolute inset-0 w-full h-full p-2" 
                 />
               </div>

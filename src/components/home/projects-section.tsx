@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Project {
   title: string;
@@ -37,7 +38,13 @@ export default function ProjectsSection() {
         projects.map((project,index) => (
           <div className="flex flex-col gap-6 items-center border-dashed border-2 hover:border-blue-300 transition-all ease-in  bg-white   h-[400px] p-4 rounded-2xl" key={index}>
             <div className="w-full rounded-2xl  h-[200px] overflow-hidden">
-              <img src={project.imageUrl} alt="" className="w-full h-full object-cover" />
+              <Image 
+                src={project.imageUrl} 
+                alt={`${project.title} preview`} 
+                width={300}
+                height={200}
+                className="w-full h-full object-cover" 
+              />
             </div>
             <div className="flex flex-col gap-4">
               <h3 className="font-bold capitalize text-xl text-gray-600">

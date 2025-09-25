@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -227,9 +228,11 @@ const ProjectCard = ({
           {/* Project image */}
           <div className="lg:col-span-1">
             <div className="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
-              <img 
+              <Image 
                 src={image} 
                 alt={`${title} preview`} 
+                width={400}
+                height={225}
                 className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" 
               />
             </div>

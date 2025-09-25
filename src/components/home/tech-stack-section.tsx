@@ -1,4 +1,5 @@
 
+import Image from "next/image";
   
 const techStack = [
   // Frontend
@@ -64,9 +65,11 @@ export default function TechStackSection() {
           {techStack.map((tech, index) => (
             <div key={`first-${index}`} className="inline-flex items-center mx-8 flex-shrink-0 group">
               <div className="relative p-2">
-                <img 
+                <Image 
                   src={tech.icon} 
                   alt={tech.name} 
+                  width={64}
+                  height={64}
                   className="w-16 h-16 transition-all duration-300 group-hover:scale-110" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -84,9 +87,11 @@ export default function TechStackSection() {
           {techStack.map((tech, index) => (
             <div key={`second-${index}`} className="inline-flex items-center mx-8 flex-shrink-0 group">
               <div className="relative p-2">
-                <img 
+                <Image 
                   src={tech.icon} 
                   alt={tech.name} 
+                  width={64}
+                  height={64}
                   className="w-16 h-16 transition-all duration-300 group-hover:scale-110" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

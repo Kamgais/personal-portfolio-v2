@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const experiences = [
     {
@@ -21,7 +22,13 @@ export default function ExperienceSection() {
             className="flex items-center justify-between w-full border-2 border-dashed  border-gray-300 pr-3 py-2 bg-white shadow-2xs"
             >
                 <div className="">
-                    <img src={experience.logo} alt="" width={50} />
+                    <Image 
+                      src={experience.logo} 
+                      alt={`${experience.name} logo`} 
+                      width={50} 
+                      height={50}
+                      className="object-contain"
+                    />
                 </div>
                 <div className="flex-1 ml-3">
                     <p className="font-bold text-sm">{experience.name}</p>
