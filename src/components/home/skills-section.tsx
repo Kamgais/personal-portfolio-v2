@@ -101,11 +101,11 @@ const skills = [
 
 export default function SkillsSection() {
   return (
-    <div className="flex gap-3 flex-wrap ">
+    <div className="flex gap-2 sm:gap-3 flex-wrap">
       {
         skills.slice(0,9).map((skill,index) => (
-          <div key={index} className=" rounded-xl p-2 bg-white shadow-accent-foreground border text-sm">
-            {skill.icon} {skill.title}
+          <div key={index} className="rounded-xl p-2 sm:p-3 bg-white shadow-accent-foreground border text-xs sm:text-sm hover:shadow-md transition-all duration-300 hover:scale-105">
+            <span className="text-sm sm:text-base">{skill.icon}</span> {skill.title}
           </div>
         ))
       }

@@ -33,11 +33,11 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <div className="grid  grid-cols-1 md:grid-cols-3 w-fit gap-4 ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
       {
         projects.map((project,index) => (
-          <div className="flex flex-col gap-6 items-center border-dashed border-2 hover:border-blue-300 transition-all ease-in  bg-white   h-[400px] p-4 rounded-2xl" key={index}>
-            <div className="w-full rounded-2xl  h-[200px] overflow-hidden">
+          <div className="flex flex-col gap-4 sm:gap-6 items-center border-dashed border-2 hover:border-blue-300 transition-all ease-in bg-white h-auto sm:h-[400px] p-4 rounded-xl sm:rounded-2xl" key={index}>
+            <div className="w-full rounded-xl sm:rounded-2xl h-[160px] sm:h-[200px] overflow-hidden">
               <Image 
                 src={project.imageUrl} 
                 alt={`${project.title} preview`} 
@@ -46,17 +46,17 @@ export default function ProjectsSection() {
                 className="w-full h-full object-cover" 
               />
             </div>
-            <div className="flex flex-col gap-4">
-              <h3 className="font-bold capitalize text-xl text-gray-600">
+            <div className="flex flex-col gap-3 sm:gap-4 text-center sm:text-left">
+              <h3 className="font-bold capitalize text-lg sm:text-xl text-gray-600">
                 {project.title}
               </h3>
-              <p className="text-sm text-gray-600 ">
+              <p className="text-xs sm:text-sm text-gray-600 line-clamp-3">
                 {project.description}
               </p>
             </div>
-            <div className="mt-auto self-start border p-1 text-xs flex items-center justify-between cursor-pointer hover:w-[110px]">
-              <Link href={project.link}>
-              Click to view
+            <div className="mt-auto self-center sm:self-start border border-gray-300 px-3 py-2 text-xs rounded-lg flex items-center justify-center cursor-pointer hover:bg-blue-50 hover:border-blue-300 transition-all duration-200 min-w-[100px]">
+              <Link href={project.link} className="text-center">
+              View Project
               </Link>
               <ArrowUpRight  size={15}/>
             </div>

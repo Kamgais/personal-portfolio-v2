@@ -42,16 +42,16 @@ const links = [
 
 export default function LinksSection() {
   return (
-    <div className="flex gap-4 flex-wrap ">
+    <div className="flex gap-2 sm:gap-3 md:gap-4 flex-wrap">
       {
         links.map((link,index) => (
            <div key={index} 
-           className={` w-[200px] border bg-white shadow-2xs p-3 flex justify-between items-center rounded-md cursor-pointer`}>
-            <p className="text-[17px] flex gap-2 items-center text-black">
-                {link.icon}
-                {link.label}
+           className={`w-full sm:w-[180px] md:w-[200px] border bg-white shadow-2xs p-2 sm:p-3 flex justify-between items-center rounded-md cursor-pointer hover:shadow-md transition-all duration-300 hover:scale-105`}>
+            <p className="text-sm sm:text-base md:text-[17px] flex gap-1 sm:gap-2 items-center text-black">
+                <span className="flex-shrink-0">{link.icon}</span>
+                <span className="truncate">{link.label}</span>
                 </p>
-            <ArrowUpRight  color="black"/>
+            <ArrowUpRight color="black" size={16} className="sm:w-5 sm:h-5 flex-shrink-0"/>
            </div>
         ))
       }

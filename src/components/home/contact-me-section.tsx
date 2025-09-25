@@ -40,17 +40,17 @@ export default function ContactMeSection() {
       }
   return (
     <Form {...form}>
-    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4">
       <FormField
         control={form.control}
         name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Name</FormLabel>
+            <FormLabel className="text-sm sm:text-base">Name</FormLabel>
             <FormControl>
-              <Input className="bg-white h-12" {...field} />
+              <Input className="bg-white h-10 sm:h-12 text-sm sm:text-base" {...field} />
             </FormControl>
-            <FormMessage />
+            <FormMessage className="text-xs sm:text-sm" />
           </FormItem>
         )}
       />
@@ -59,11 +59,11 @@ export default function ContactMeSection() {
         name="email"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Email</FormLabel>
+            <FormLabel className="text-sm sm:text-base">Email</FormLabel>
             <FormControl>
-              <Input className="bg-white h-12" {...field} />
+              <Input className="bg-white h-10 sm:h-12 text-sm sm:text-base" {...field} />
             </FormControl>
-            <FormMessage />
+            <FormMessage className="text-xs sm:text-sm" />
           </FormItem>
         )}
       />
@@ -72,15 +72,15 @@ export default function ContactMeSection() {
         name="message"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>Message</FormLabel>
+            <FormLabel className="text-sm sm:text-base">Message</FormLabel>
             <FormControl>
-              <Textarea className="bg-white h-28" {...field} />
+              <Textarea className="bg-white h-24 sm:h-28 text-sm sm:text-base resize-none" {...field} />
             </FormControl>
-            <FormMessage />
+            <FormMessage className="text-xs sm:text-sm" />
           </FormItem>
         )}
       />
-      <Button type="submit" className="h-12 w-full">Submit</Button>
+      <Button type="submit" className="h-10 sm:h-12 w-full text-sm sm:text-base">Submit</Button>
     </form>
   </Form>
   )

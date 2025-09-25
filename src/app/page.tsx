@@ -13,16 +13,16 @@ import TechStackSection from "@/components/home/tech-stack-section";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col xl:flex-row gap-8 py-8 justify-center">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 py-4 sm:py-6 lg:py-8">
           {/* Profile Sidebar */}
-          <div className="xl:w-80 xl:sticky xl:top-8 xl:self-start">
+          <div className="lg:w-80 lg:sticky lg:top-8 lg:self-start">
             <ProfileSidebar />
           </div>
           
           {/* Main Content */}
-          <div className="flex-1 xl:max-w-4xl mx-auto">
-            <div className="space-y-12">
+          <div className="flex-1 lg:max-w-4xl">
+            <div className="space-y-8 sm:space-y-10 lg:space-y-12">
               <Section title="about" moreHref="/about">
                 <AboutSection />
               </Section>
