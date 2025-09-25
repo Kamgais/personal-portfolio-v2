@@ -12,9 +12,9 @@ interface SectionProps {
 
 export default function Section({title, children, moreLink = true, moreHref}: SectionProps) {
   return (
-    <section className="backdrop-blur-sm bg-white/70 border border-white/20 shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8">
+    <section className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border border-white/20 dark:border-gray-700/20 shadow-xl rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-colors duration-300">
       <div className="flex justify-between items-center mb-4 sm:mb-6">
-        <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 capitalize">
+        <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 dark:text-white capitalize transition-colors duration-300">
           {title}
         </h2>
         
@@ -23,7 +23,7 @@ export default function Section({title, children, moreLink = true, moreHref}: Se
             <TooltipTrigger asChild>
               <Link 
                 href={moreHref!} 
-                className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors group"
+                className="inline-flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-full transition-colors group"
               >
                 <MoveRight size={14} className="sm:w-[18px] sm:h-[18px] transition-transform group-hover:translate-x-1" />
               </Link>

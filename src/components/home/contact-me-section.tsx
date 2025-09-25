@@ -46,9 +46,9 @@ export default function ContactMeSection() {
         name="name"
         render={({ field }) => (
           <FormItem>
-            <FormLabel className="text-sm sm:text-base">Name</FormLabel>
+            <FormLabel className="text-sm sm:text-base text-gray-700 dark:text-gray-300 transition-colors duration-300">Name</FormLabel>
             <FormControl>
-              <Input className="bg-white h-10 sm:h-12 text-sm sm:text-base" {...field} />
+              <Input className="bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 h-10 sm:h-12 text-sm sm:text-base transition-colors duration-300" {...field} />
             </FormControl>
             <FormMessage className="text-xs sm:text-sm" />
           </FormItem>
@@ -59,9 +59,9 @@ export default function ContactMeSection() {
         name="email"
         render={({ field }) => (
           <FormItem>
-            <FormLabel className="text-sm sm:text-base">Email</FormLabel>
+            <FormLabel className="text-sm sm:text-base text-gray-700 dark:text-gray-300 transition-colors duration-300">Email</FormLabel>
             <FormControl>
-              <Input className="bg-white h-10 sm:h-12 text-sm sm:text-base" {...field} />
+              <Input className="bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 h-10 sm:h-12 text-sm sm:text-base transition-colors duration-300" {...field} />
             </FormControl>
             <FormMessage className="text-xs sm:text-sm" />
           </FormItem>
@@ -72,9 +72,9 @@ export default function ContactMeSection() {
         name="message"
         render={({ field }) => (
           <FormItem>
-            <FormLabel className="text-sm sm:text-base">Message</FormLabel>
+            <FormLabel className="text-sm sm:text-base text-gray-700 dark:text-gray-300 transition-colors duration-300">Message</FormLabel>
             <FormControl>
-              <Textarea className="bg-white h-24 sm:h-28 text-sm sm:text-base resize-none" {...field} />
+              <Textarea className="bg-white dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 h-24 sm:h-28 text-sm sm:text-base resize-none transition-colors duration-300" {...field} />
             </FormControl>
             <FormMessage className="text-xs sm:text-sm" />
           </FormItem>

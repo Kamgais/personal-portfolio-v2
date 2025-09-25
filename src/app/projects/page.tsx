@@ -9,9 +9,12 @@ import Image from "next/image";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-white via-slate-50/20 to-blue-50/10 relative">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.02)_0%,transparent_50%)] pointer-events-none"></div>
+      
       {/* Sticky Header */}
-      <header className="sticky top-0 z-50 border-b border-white/20 backdrop-blur-lg bg-white/80 shadow-sm">
+      <header className="sticky top-0 z-50 border-b border-slate-200/40 backdrop-blur-lg bg-white/90 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link
             href="/"

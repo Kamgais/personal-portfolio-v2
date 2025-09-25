@@ -104,7 +104,7 @@ export default function SkillsSection() {
     <div className="flex gap-2 sm:gap-3 flex-wrap">
       {
         skills.slice(0,9).map((skill,index) => (
-          <div key={index} className="rounded-xl p-2 sm:p-3 bg-white shadow-accent-foreground border text-xs sm:text-sm hover:shadow-md transition-all duration-300 hover:scale-105">
+          <div key={index} className="rounded-xl p-2 sm:p-3 bg-white dark:bg-gray-800 shadow-accent-foreground border border-gray-200 dark:border-gray-700 text-xs sm:text-sm text-gray-800 dark:text-gray-200 hover:shadow-md dark:hover:shadow-gray-900/20 transition-all duration-300 hover:scale-105">
             <span className="text-sm sm:text-base">{skill.icon}</span> {skill.title}
           </div>
         ))

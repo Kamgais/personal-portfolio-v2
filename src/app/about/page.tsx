@@ -48,16 +48,19 @@ const photos = [
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-white via-slate-50/20 to-blue-50/10 dark:from-gray-900 dark:via-gray-900/90 dark:to-blue-950/20 relative transition-colors duration-300">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.02)_0%,transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(147,197,253,0.03)_0%,transparent_50%)] pointer-events-none"></div>
+      
       {/* Header */}
-      <div className="bg-white/80 backdrop-blur-sm border-b border-slate-200/60 sticky top-0 z-10">
+      <div className="bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-slate-200/40 dark:border-gray-700/40 sticky top-0 z-20 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-8 py-3 sm:py-4">
           <div className="flex items-center">
             <Link 
               href="/" 
-              className="group flex items-center text-slate-600 hover:text-slate-900 transition-colors duration-200"
+              className="group flex items-center text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-gray-200 transition-colors duration-200"
             >
-              <div className="p-1.5 sm:p-2 rounded-full group-hover:bg-slate-100 transition-colors duration-200">
+              <div className="p-1.5 sm:p-2 rounded-full group-hover:bg-slate-100 dark:group-hover:bg-gray-800 transition-colors duration-200">
                 <MoveLeft size={16} className="sm:w-[18px] sm:h-[18px]"/>
               </div>
               <span className="ml-2 font-medium text-sm sm:text-base">Back</span>
@@ -69,22 +72,22 @@ const About = () => {
       {/* Hero Section */}
       <div className="max-w-5xl mx-auto px-3 sm:px-4 lg:px-8 py-8 sm:py-12">
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-purple-50 text-purple-700 text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 text-xs sm:text-sm font-medium mb-4 sm:mb-6 transition-colors duration-300">
             <User className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
             About Me
           </div>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4 px-4">
-            Hello, I&apos;m <span className="text-blue-600">Cyril Kamgais</span>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 dark:text-gray-100 mb-3 sm:mb-4 px-4 transition-colors duration-300">
+            Hello, I&apos;m <span className="text-blue-600 dark:text-blue-400">Cyril Kamgais</span>
             <span className="inline-block ml-2 text-xl sm:text-2xl lg:text-3xl">👋</span>
           </h1>
-          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed px-4">
+          <p className="text-base sm:text-lg text-slate-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed px-4 transition-colors duration-300">
             A curious soul with a passion for creativity, exploration, and meaningful connections.
           </p>
         </div>
 
         {/* Profile Section */}
         <div className="relative mb-12 sm:mb-16">
-          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-colors duration-300">
             <CardContent className="p-0">
               {/* Header Section */}
               <div className="bg-gradient-to-r from-purple-900 to-blue-900 text-white p-4 sm:p-6 lg:p-8">
@@ -107,8 +110,8 @@ const About = () => {
               {/* Content Section */}
               <div className="p-8 space-y-8">
                 {/* Introduction */}
-                <div className="bg-purple-50/50 border border-purple-100 rounded-xl p-6">
-                  <p className="text-slate-700 leading-relaxed text-center">
+                <div className="bg-purple-50/50 dark:bg-purple-900/20 border border-purple-100 dark:border-purple-800/30 rounded-xl p-6 transition-colors duration-300">
+                  <p className="text-slate-700 dark:text-gray-300 leading-relaxed text-center transition-colors duration-300">
                     <span className="inline-block mr-1">👋</span> Hey there! I&apos;m Cyril, a curious soul with a passion for creativity and exploration. 
                     When I&apos;m not immersed in the digital world, I find joy in simple pleasures and meaningful connections.
                   </p>
@@ -120,13 +123,13 @@ const About = () => {
 
         {/* Photo Gallery Section */}
         <div className="mb-16">
-          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm transition-colors duration-300">
             <CardContent className="p-8">
               <div className="flex items-center mb-8">
-                <div className="p-2 bg-pink-100 rounded-lg mr-3">
-                  <Camera className="h-5 w-5 text-pink-600" />
+                <div className="p-2 bg-pink-100 dark:bg-pink-900/30 rounded-lg mr-3 transition-colors duration-300">
+                  <Camera className="h-5 w-5 text-pink-600 dark:text-pink-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900">Photo Gallery</h3>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-gray-100 transition-colors duration-300">Photo Gallery</h3>
               </div>
               
               <div className="max-w-2xl mx-auto">
@@ -136,7 +139,7 @@ const About = () => {
                       <CarouselItem key={photo.id}>
                         <Card className="border-none shadow-none">
                           <CardContent className="p-0">
-                            <AspectRatio ratio={4/3} className="bg-slate-50 rounded-xl overflow-hidden shadow-md">
+                            <AspectRatio ratio={4/3} className="bg-slate-50 dark:bg-gray-700 rounded-xl overflow-hidden shadow-md transition-colors duration-300">
                               <Image 
                                 src={photo.src} 
                                 alt={photo.alt}
