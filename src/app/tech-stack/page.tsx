@@ -3,6 +3,7 @@ import { MoveLeft, Layers, Globe, Code, Database, Cloud, ExternalLink } from "lu
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
+import Image from "next/image";
 
 interface TechCardProps {
   name: string;
@@ -20,7 +21,13 @@ const TechCard = ({ name, icon, description, details, docsLink }: TechCardProps)
         <div className="flex items-start space-x-4">
           <div className="flex-shrink-0">
             <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-100 to-slate-50 p-3 shadow-sm">
-              <img src={icon} alt={name} className="w-full h-full object-contain" />
+              <Image 
+                src={icon} 
+                alt={name} 
+                width={40}
+                height={40}
+                className="w-full h-full object-contain" 
+              />
             </div>
           </div>
           <div className="flex-1 min-w-0">

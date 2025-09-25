@@ -1,5 +1,6 @@
 import { BriefcaseBusiness, Globe, Mail, MapPin, Smartphone, Download, Send } from "lucide-react"
 import { Button } from "../ui/button"
+import Image from "next/image"
 
 export default function ProfileSidebar() {
   return (
@@ -10,10 +11,13 @@ export default function ProfileSidebar() {
           {/* Profile Image */}
           <div className="relative">
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
-              <img 
+              <Image 
                 src="/profile-pic.png" 
                 alt="Cyril Kamgais" 
-                className="w-full h-full object-cover" 
+                width={128}
+                height={128}
+                className="w-full h-full object-cover"
+                priority
               />
             </div>
             <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
@@ -24,7 +28,7 @@ export default function ProfileSidebar() {
           {/* Name & Title */}
           <div className="space-y-2">
             <h1 className="text-2xl font-bold text-slate-900">
-              Hello I'm <span className="text-blue-600">Cyril Kamgais</span> 👋
+              Hello I&apos;m <span className="text-blue-600">Cyril Kamgais</span> 👋
             </h1>
             <p className="text-slate-600 leading-relaxed">
               Software Developer, Aspiring DevOps Engineer & Content Creator
@@ -49,7 +53,7 @@ export default function ProfileSidebar() {
       {/* Contact Card */}
       <div className="backdrop-blur-sm bg-white/80 border border-white/20 shadow-xl rounded-2xl p-6">
         <div className="space-y-4">
-          <h3 className="font-semibold text-slate-900 text-center mb-4">Let's Connect</h3>
+          <h3 className="font-semibold text-slate-900 text-center mb-4">Let&apos;s Connect</h3>
           
           {/* Contact Info */}
           <div className="space-y-3">
