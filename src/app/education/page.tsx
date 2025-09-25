@@ -3,6 +3,7 @@ import { GraduationCap, Calendar, School, Award, BookOpen, MoveLeft } from "luci
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
+import Image from "next/image";
 
 const Education = () => {
   const educations = [
@@ -114,9 +115,11 @@ const Education = () => {
                         <CardHeader className="border-b border-slate-100">
                           <div className="flex items-start gap-4">
                             <div className="w-14 h-14 rounded-lg overflow-hidden bg-white border border-slate-200 flex-shrink-0">
-                              <img 
+                              <Image 
                                 src={education.logo} 
                                 alt={`${education.name} logo`} 
+                                width={56}
+                                height={56}
                                 className="w-full h-full object-cover" 
                               />
                             </div>
@@ -164,9 +167,11 @@ const Education = () => {
                         <CardHeader className="border-b border-slate-100">
                           <div className="flex items-start gap-4">
                             <div className="w-14 h-14 rounded-lg overflow-hidden bg-white border border-slate-200 flex-shrink-0">
-                              <img 
+                              <Image 
                                 src={education.logo} 
                                 alt={`${education.name} logo`} 
+                                width={56}
+                                height={56}
                                 className="w-full h-full object-cover" 
                               />
                             </div>

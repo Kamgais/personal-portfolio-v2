@@ -1,5 +1,6 @@
 import { Book, Camera, Headphones, Gamepad, Code, Globe, MoveLeft, Lightbulb, User, Heart } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import { 
   Carousel,
   CarouselContent,
@@ -73,7 +74,7 @@ const About = () => {
             About Me
           </div>
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
-            Hello, I'm <span className="text-blue-600">Cyril Kamgais</span>
+            Hello, I&apos;m <span className="text-blue-600">Cyril Kamgais</span>
             <span className="inline-block ml-2 text-3xl">👋</span>
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -89,10 +90,13 @@ const About = () => {
               <div className="bg-gradient-to-r from-purple-900 to-blue-900 text-white p-8">
                 <div className="flex flex-col items-center text-center">
                   <div className="w-32 h-32 mb-6 overflow-hidden rounded-full bg-white/10 border-4 border-white/20 shadow-2xl backdrop-blur-sm">
-                    <img
+                    <Image
                       src="/profile-pic.png"
                       alt="Cyril Kamgais"
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover"
+                      priority
                     />
                   </div>
                   <h2 className="text-2xl font-bold mb-2">Cyril Kamgais</h2>
@@ -105,8 +109,8 @@ const About = () => {
                 {/* Introduction */}
                 <div className="bg-purple-50/50 border border-purple-100 rounded-xl p-6">
                   <p className="text-slate-700 leading-relaxed text-center">
-                    <span className="inline-block mr-1">👋</span> Hey there! I'm Cyril, a curious soul with a passion for creativity and exploration. 
-                    When I'm not immersed in the digital world, I find joy in simple pleasures and meaningful connections.
+                    <span className="inline-block mr-1">👋</span> Hey there! I&apos;m Cyril, a curious soul with a passion for creativity and exploration. 
+                    When I&apos;m not immersed in the digital world, I find joy in simple pleasures and meaningful connections.
                   </p>
                 </div>
               </div>
@@ -133,9 +137,11 @@ const About = () => {
                         <Card className="border-none shadow-none">
                           <CardContent className="p-0">
                             <AspectRatio ratio={4/3} className="bg-slate-50 rounded-xl overflow-hidden shadow-md">
-                              <img 
+                              <Image 
                                 src={photo.src} 
                                 alt={photo.alt}
+                                width={400}
+                                height={300}
                                 className="object-cover w-full h-full transition-all duration-300 hover:scale-105"
                               />
                             </AspectRatio>
@@ -190,7 +196,7 @@ const About = () => {
               <div className="space-y-6 max-w-3xl">
                 <div className="border-l-4 border-blue-200 pl-6">
                   <p className="text-slate-700 leading-relaxed">
-                    I'm a firm believer in continuous learning and personal growth. Weekends often find me hiking local trails, 
+                    I&apos;m a firm believer in continuous learning and personal growth. Weekends often find me hiking local trails, 
                     experimenting with new recipes, or losing track of time in bookstores.
                   </p>
                 </div>
@@ -238,7 +244,7 @@ const About = () => {
         <div className="text-center">
           <Card className="overflow-hidden border-0 shadow-lg bg-gradient-to-r from-slate-900 to-slate-800">
             <CardContent className="p-8">
-              <p className="text-slate-300 mb-6 text-lg">Let's connect and share stories!</p>
+              <p className="text-slate-300 mb-6 text-lg">Let&apos;s connect and share stories!</p>
               <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <Globe className="h-5 w-5 mr-3 text-blue-400" />
                 <span className="text-blue-400 font-medium">cyrilkamgais.com</span>

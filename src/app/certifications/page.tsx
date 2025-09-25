@@ -1,18 +1,7 @@
-import { Award, Calendar, BookText, BadgeCheck, Filter, MoveLeft, Clock, Target } from "lucide-react";
+import { Award, Calendar, BookText, BadgeCheck, MoveLeft, Clock, Target } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-
-interface Certification {
-  logo: string;
-  name: string;
-  issuer: string;
-  date: string;
-  category: string;
-  credential: string;
-  skills: string[]
-}
 
 const Certifications = () => {
   // Currently working on these certifications
@@ -93,7 +82,7 @@ const Certifications = () => {
               </div>
               
               <p className="text-slate-600 mb-8 leading-relaxed">
-                I'm actively working towards obtaining these professional certifications to deepen my expertise 
+                I&apos;m actively working towards obtaining these professional certifications to deepen my expertise 
                 in cloud architecture, container orchestration, and enterprise-level solution design.
               </p>
 
