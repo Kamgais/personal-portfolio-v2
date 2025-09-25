@@ -46,18 +46,58 @@ const techStack = [
 
 export default function TechStackSection() {
   return (
+    <div className="relative overflow-hidden bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 p-8 rounded-2xl border border-white/20 shadow-lg backdrop-blur-sm">
+      {/* Enhanced gradient fade effects */}
+      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-blue-50 via-blue-50/80 to-transparent z-10"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-purple-50 via-purple-50/80 to-transparent z-10"></div>
+      
+      <div className="text-center mb-8">
+        <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
+          Technologies I Work With
+        </h3>
+        <p className="text-gray-600 text-lg">A comprehensive toolkit for building modern solutions</p>
+      </div>
 
-    
-   <div className="relative">
-   <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-gray-100 to-transparent pointer-events-none"></div>
-   <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-gray-100 to-transparent pointer-events-none"></div>
-    <div className="flex space-x-8 animate-marquee w-full ">
-      {techStack.map((tech, index) => (
-   
-          <img src={tech.icon} alt={tech.name} className=" w-15" key={index} />
-
-      ))}
+      {/* Double marquee for seamless infinite scroll */}
+      <div className="flex">
+        <div className="animate-marquee flex">
+          {techStack.map((tech, index) => (
+            <div key={`first-${index}`} className="inline-flex items-center mx-8 flex-shrink-0 group">
+              <div className="relative p-2">
+                <img 
+                  src={tech.icon} 
+                  alt={tech.name} 
+                  className="w-16 h-16 transition-all duration-300 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Tooltip on hover */}
+                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                  {tech.name}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Duplicate for seamless loop */}
+        <div className="animate-marquee flex" aria-hidden="true">
+          {techStack.map((tech, index) => (
+            <div key={`second-${index}`} className="inline-flex items-center mx-8 flex-shrink-0 group">
+              <div className="relative p-2">
+                <img 
+                  src={tech.icon} 
+                  alt={tech.name} 
+                  className="w-16 h-16 transition-all duration-300 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                  {tech.name}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-    </div>
-  )
+  );
 }

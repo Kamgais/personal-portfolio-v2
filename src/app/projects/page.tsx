@@ -1,5 +1,5 @@
 
-import { Github, Globe,  Calendar, BriefcaseIcon, GraduationCap, User, MoveLeft } from "lucide-react";
+import { Github, Globe, Calendar, BriefcaseIcon, GraduationCap, User, MoveLeft, FolderOpen } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,159 +8,190 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div className="min-h-screen mt-5 lg:mt-16 px-0 sm:px-6 lg:px-8 max-w-4xl mx-auto text-sm">
-      {/* Header with back button */}
-      <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center">
-          <Link href="/" className="p-2 hover:bg-gray-100 rounded-full transition duration-200">
-            <MoveLeft size={15} />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-50 border-b border-white/20 backdrop-blur-lg bg-white/80 shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors group"
+          >
+            <MoveLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            <span className="text-sm font-medium">Back to Home</span>
           </Link>
-          <h1 className="text-2xl font-bold ml-2">#Projects</h1>
+        </div>
+      </header>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-6">
+            <FolderOpen className="w-4 h-4" />
+            Projects Portfolio
+          </div>
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            My Projects
+          </h1>
+          
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            A collection of personal, academic, and client projects showcasing my skills 
+            in web development, software engineering, and problem-solving across different domains.
+          </p>
+        </div>
+
+        <div className="space-y-8">
+          <Card className="backdrop-blur-sm bg-white/70 border-white/20 shadow-xl">
+            <CardContent className="p-8">
+              <Tabs defaultValue="personal" className="w-full">
+                <TabsList className="grid grid-cols-3 mb-8 w-full h-12">
+                  <TabsTrigger value="personal" className="flex items-center gap-2 text-sm font-medium">
+                    <User className="h-4 w-4" />
+                    Personal
+                  </TabsTrigger>
+                  <TabsTrigger value="academic" className="flex items-center gap-2 text-sm font-medium">
+                    <GraduationCap className="h-4 w-4" />
+                    Academic
+                  </TabsTrigger>
+                  <TabsTrigger value="client" className="flex items-center gap-2 text-sm font-medium">
+                    <BriefcaseIcon className="h-4 w-4" />
+                    Professional
+                  </TabsTrigger>
+                </TabsList>
+
+                {/* Personal Projects */}
+                <TabsContent value="personal" className="space-y-8">
+                  <ProjectCard 
+                    title="Sommaire AI - AI-Based PDF Summarization Platform"
+                    description="A modern SaaS platform that transforms PDF documents into concise, visually appealing summaries using advanced AI technology with both OpenAI GPT-4 and Google Gemini AI integration."
+                    image="/image1.jpeg"
+                    timeline="2025"
+                    techStack={["Next.js 15", "TypeScript", "PostgreSQL", "OpenAI GPT-4", "Google Gemini AI", "LangChain", "Stripe", "Clerk", "Tailwind CSS", "shadcn/ui"]}
+                    features={[
+                      "AI-powered document analysis with automatic PDF content extraction",
+                      "Intelligent summaries with structured, emoji-based content presentation",
+                      "Complete user authentication with secure Clerk integration",
+                      "Stripe payment processing for subscription management (Basic/Pro plans)",
+                      "Responsive UI/UX with modern design system",
+                      "Dual AI provider integration for optimal availability and quality"
+                    ]}
+                    demoLink="https://sommaire-ai.vercel.app"
+                    codeLink="https://github.com/Kamgais/sommaire-ai"
+                    goal="To create a comprehensive SaaS platform that leverages cutting-edge AI technology to help users quickly understand and process complex PDF documents through intelligent summarization."
+                    category="personal"
+                  />
+
+                  <ProjectCard 
+                    title="BOD (Battle on Demand) - Backend API"
+                    description="Real-time API for a dance battle platform featuring live streaming, interactive voting, and event management with scalable architecture supporting 1000+ concurrent users."
+                    image="/image2.jpeg"
+                    timeline="2024"
+                    techStack={["TypeScript", "NestJS", "PostgreSQL", "Socket.io", "Docker", "Stripe API", "PayPal API", "OAuth2", "Cloudinary"]}
+                    features={[
+                      "14+ WebSocket endpoints for real-time communication",
+                      "Multi-provider OAuth2 authentication system",
+                      "Integrated payment processing with Stripe and PayPal",
+                      "Docker containerization for deployment flexibility",
+                      "Media management with Cloudinary integration",
+                      "Scalable architecture designed for high concurrent usage"
+                    ]}
+                    demoLink="https://battle-on-demand.herokuapp.com"
+                    codeLink="https://github.com/Kamgais/bod-backend-api"
+                    goal="To build a robust, scalable backend infrastructure that supports real-time interactions for dance battle events while maintaining high performance under heavy load."
+                    category="personal"
+                  />
+                </TabsContent>
+
+                {/* Academic Projects */}
+                <TabsContent value="academic" className="space-y-8">
+                  <ProjectCard 
+                    title="Complete Cloud Infrastructure Development"
+                    description="Implementation of a scalable AWS cloud architecture for the 'PostOn' web application with Infrastructure as Code (Terraform), automated CI/CD pipelines, and comprehensive security analysis."
+                    image="/image3.jpeg"
+                    timeline="2024"
+                    techStack={["AWS", "Terraform", "GitHub Actions", "Docker", "Spring Boot", "React", "MySQL", "Amazon RDS", "SonarCloud"]}
+                    features={[
+                      "Infrastructure as Code with Terraform (VPC, EC2, RDS, S3, Subnets, Security Groups)",
+                      "Complete CI/CD pipeline with GitHub Actions and Docker containerization",
+                      "Spring Boot backend and React frontend deployed on AWS EC2",
+                      "MySQL database with Amazon RDS integration",
+                      "Static code analysis and security scanning with SonarCloud",
+                      "Automated testing and deployment automation"
+                    ]}
+                    demoLink="https://poston-app.aws-demo.com"
+                    codeLink="https://github.com/Kamgais/poston-cloud-infrastructure"
+                    goal="To design and implement a complete cloud-native infrastructure that demonstrates proficiency in modern DevOps practices, cloud architecture, and automated deployment strategies."
+                    category="academic"
+                  />
+
+                  <ProjectCard 
+                    title="Retrieval-Augmented Generation (RAG) Systems"
+                    description="Development and implementation of RAG-based NLP systems to improve text generation through integration of external knowledge sources and context-based response generation."
+                    image="/image4.jpeg"
+                    timeline="2024"
+                    techStack={["Python", "Transformer Models", "NLP", "Machine Learning", "Knowledge Databases", "Embedding Systems"]}
+                    features={[
+                      "Implementation of various RAG architectures in Python",
+                      "Modularization of RAG systems for flexible adaptation and extensibility",
+                      "Integration of knowledge databases and embedding-based retrieval systems",
+                      "Utilization of Transformer models for context-aware response generation",
+                      "Development of test pipelines for evaluating accuracy and relevance",
+                      "Comprehensive documentation of system architecture and experiments"
+                    ]}
+                    demoLink="https://rag-demo.streamlit.app"
+                    codeLink="https://github.com/Kamgais/rag-nlp-systems"
+                    goal="To advance understanding of modern NLP techniques by building sophisticated RAG systems that demonstrate the integration of retrieval mechanisms with generative AI models."
+                    category="academic"
+                  />
+                </TabsContent>
+
+                {/* Professional Projects */}
+                <TabsContent value="client" className="space-y-8">
+                  <ProjectCard 
+                    title="Timerbee AWS Cloud Migration"
+                    description="Conception and implementation of complete cloud migration of the Timerbee platform (resource management and appointment scheduling for healthcare facilities) from traditional on-premises architecture to scalable AWS cloud solution."
+                    image="/timerbee.png"
+                    timeline="In Progress - Expected completion: January 2026"
+                    techStack={["AWS", "VPC", "Amazon ECS", "Fargate", "Amazon Aurora PostgreSQL", "ElastiCache", "ECR", "S3", "CloudWatch", "Secrets Manager", "CloudFormation", "IAM"]}
+                    features={[
+                      "Design of highly available multi-tier architecture with VPC, subnets and load balancing",
+                      "Implementation of microservices with Amazon ECS, Fargate and containerized applications",
+                      "Development of secure data infrastructure with Amazon Aurora PostgreSQL and ElastiCache",
+                      "Integration of AWS-native services (ECR, S3, CloudWatch, Secrets Manager, CloudFormation)",
+                      "Establishment of robust CI/CD pipeline with automated deployment",
+                      "Implementation of IAM security concepts and monitoring solutions"
+                    ]}
+                    demoLink="https://timerbee-cloud.imilia.com"
+                    codeLink="https://github.com/Kamgais/timerbee-aws-migration"
+                    goal="To develop a cloud-native, scalable and highly available architecture with improved performance and reduced operational costs for healthcare resource management."
+                    category="client"
+                  />
+
+                  <ProjectCard 
+                    title="Web-based License Management Application"
+                    description="Complete development of a License Management App (LMA) for internal management of Timerbee customer licenses, enabling IMILIA to centrally manage, monitor and update all Timerbee license installations at healthcare customers."
+                    image="/image6.jpeg"
+                    timeline="2024"
+                    techStack={["Angular", "TypeScript", "Angular Material", "SCSS", "Spring Boot", "Java", "PostgreSQL", "Docker", "Docker Compose", "Cypress"]}
+                    features={[
+                      "Frontend development with Angular, TypeScript, Angular Material and SCSS",
+                      "Backend implementation with Spring Boot, Java and PostgreSQL",
+                      "RESTful API design with complete CRUD operations",
+                      "Containerization with Docker and Docker Compose",
+                      "End-to-end testing with Cypress",
+                      "Secure license generation and management with encryption functions"
+                    ]}
+                    demoLink="https://lma.imilia.com"
+                    codeLink="https://github.com/Kamgais/license-management-app"
+                    goal="To create a comprehensive license management system that provides complete administration of licenses, customers, products, resellers and users including search/filter functions and automated license generation."
+                    category="client"
+                  />
+                </TabsContent>
+              </Tabs>
+            </CardContent>
+          </Card>
         </div>
       </div>
-
-      {/* Intro section */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl font-medium mb-6">
-          Personal, Academic & Client Projects
-        </h2>
-        <p className="text-slate-600 max-w-2xl mx-auto">
-          Below are some of the key projects I&apos;ve worked on, showcasing my skills and experience
-          in web development and software engineering across different domains.
-        </p>
-      </div>
-
-      {/* Projects Tabs */}
-      <Tabs defaultValue="personal" className="w-full">
-        <TabsList className="grid grid-cols-3 mb-8 w-full">
-          <TabsTrigger value="personal" className="flex items-center gap-2">
-            <User className="h-4 w-4" />
-            Personal
-          </TabsTrigger>
-          <TabsTrigger value="academic" className="flex items-center gap-2">
-            <GraduationCap className="h-4 w-4" />
-            Academic
-          </TabsTrigger>
-          <TabsTrigger value="client" className="flex items-center gap-2">
-            <BriefcaseIcon className="h-4 w-4" />
-            Client
-          </TabsTrigger>
-        </TabsList>
-
-        {/* Personal Projects */}
-        <TabsContent value="personal" className="space-y-8">
-          <ProjectCard 
-            title="Portfolio Website"
-            description="Personal portfolio website built with React and Tailwind CSS to showcase my skills, experience, and projects."
-            image="/project-eins.png"
-            timeline="April 2025"
-            techStack={["React", "TypeScript", "Tailwind CSS", "Shadcn UI"]}
-            features={[
-              "Responsive design that works on all devices",
-              "Modern UI with smooth animations",
-              "Organized sections for skills, experience, and projects",
-              "Interactive components for better user experience"
-            ]}
-            demoLink="https://example.com"
-            codeLink="https://github.com/username/portfolio"
-            goal="To create a visually appealing and professional online presence that effectively showcases my skills and projects to potential employers and clients."
-            category="personal"
-          />
-
-          <ProjectCard 
-            title="Developer Blog"
-            description="A technical blog built with Next.js and MDX to share programming tutorials and insights."
-            image="/lovable-uploads/96794321-f3bd-4d87-ad9b-00960d7f8267.png"
-            timeline="February 2025"
-            techStack={["Next.js", "MDX", "Tailwind CSS", "Vercel"]}
-            features={[
-              "Markdown content with code syntax highlighting",
-              "SEO optimization for better discoverability",
-              "Newsletter subscription functionality",
-              "Dark/light mode toggle"
-            ]}
-            demoLink="https://example.com/blog"
-            codeLink="https://github.com/username/dev-blog"
-            goal="To share my technical knowledge with the wider developer community while improving my own understanding through the process of writing and explaining complex concepts."
-            category="personal"
-          />
-        </TabsContent>
-
-        {/* Academic Projects */}
-        <TabsContent value="academic" className="space-y-8">
-          <ProjectCard 
-            title="Machine Learning Image Classifier"
-            description="A Python-based image classification project developed as part of a machine learning course."
-            image="/lovable-uploads/4363171d-5fc4-4fe2-85c1-0ef6f0ae2374.png"
-            timeline="Fall 2024"
-            techStack={["Python", "TensorFlow", "Keras", "NumPy", "Matplotlib"]}
-            features={[
-              "Convolutional Neural Network (CNN) architecture",
-              "Data augmentation techniques",
-              "Model evaluation and performance metrics",
-              "Transfer learning with pre-trained models"
-            ]}
-            codeLink="https://github.com/username/ml-image-classifier"
-            goal="To implement and evaluate different neural network architectures for image classification tasks, demonstrating proficiency in machine learning concepts and techniques."
-            category="academic"
-          />
-
-          <ProjectCard 
-            title="Distributed Systems Final Project"
-            description="A distributed database system with fault tolerance and horizontal scaling capabilities."
-            image="/lovable-uploads/96794321-f3bd-4d87-ad9b-00960d7f8267.png"
-            timeline="Spring 2024"
-            techStack={["Java", "Kubernetes", "Docker", "gRPC", "Redis"]}
-            features={[
-              "Consensus algorithm implementation",
-              "Load balancing and sharding",
-              "Fault tolerance and recovery mechanisms",
-              "Performance optimization under different workloads"
-            ]}
-            codeLink="https://github.com/username/distributed-db"
-            goal="To design and implement a distributed system that demonstrates key concepts such as consensus, replication, and fault tolerance while maintaining high performance and reliability."
-            category="academic"
-          />
-        </TabsContent>
-
-        {/* Client Projects */}
-        <TabsContent value="client" className="space-y-8">
-          <ProjectCard 
-            title="E-commerce Platform"
-            description="A full-stack e-commerce application with product catalog, shopping cart, and secure checkout functionality."
-            image="/lovable-uploads/96794321-f3bd-4d87-ad9b-00960d7f8267.png"
-            timeline="January - March 2025"
-            techStack={["React", "Node.js", "Express", "MongoDB", "Redux", "Stripe API"]}
-            features={[
-              "User authentication and authorization",
-              "Product catalog with filtering and search",
-              "Shopping cart with persistent storage",
-              "Secure payment processing with Stripe",
-              "Order history and tracking"
-            ]}
-            demoLink="https://example.com/ecommerce"
-            goal="To build a secure, scalable e-commerce platform that provides an intuitive shopping experience for customers while giving the client powerful tools to manage their inventory and track sales."
-            category="client"
-          />
-
-          <ProjectCard 
-            title="Healthcare Management System"
-            description="A comprehensive healthcare management system for a local clinic to streamline patient care and administrative tasks."
-            image="/lovable-uploads/4363171d-5fc4-4fe2-85c1-0ef6f0ae2374.png"
-            timeline="October - December 2024"
-            techStack={["Angular", "Spring Boot", "PostgreSQL", "TypeScript", "HIPAA Compliance"]}
-            features={[
-              "Patient records management",
-              "Appointment scheduling system",
-              "Billing and insurance processing",
-              "Secure communication between patients and providers",
-              "Analytics dashboard for clinic performance"
-            ]}
-            goal="To modernize the client's healthcare operations by implementing a secure, HIPAA-compliant system that improves efficiency for staff and enhances the patient experience."
-            category="client"
-          />
-        </TabsContent>
-      </Tabs>
     </div>
   );
 };
@@ -190,21 +221,21 @@ const ProjectCard = ({
   category: "personal" | "academic" | "client";
 }) => {
   return (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-md">
+    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg border-white/20 bg-white/60 backdrop-blur-sm">
       <CardContent className="p-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Project image */}
           <div className="lg:col-span-1">
-            <div className="aspect-video rounded-md overflow-hidden bg-slate-100">
+            <div className="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
               <img 
                 src={image} 
                 alt={`${title} preview`} 
-                className="w-full h-full object-cover object-center" 
+                className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105" 
               />
             </div>
             <div className="mt-4 flex items-center text-slate-600 text-sm">
-              <Calendar className="h-4 w-4 mr-1" />
-              <span>{timeline}</span>
+              <Calendar className="h-4 w-4 mr-2 text-blue-500" />
+              <span className="font-medium">{timeline}</span>
             </div>
           </div>
           
@@ -212,35 +243,35 @@ const ProjectCard = ({
           <div className="lg:col-span-2">
             <div className="space-y-4">
               <div className="flex justify-between items-start">
-                <h3 className="text-xl font-semibold text-slate-800">{title}</h3>
+                <h3 className="text-xl font-semibold text-slate-900 leading-tight">{title}</h3>
                 <Badge 
                   className={`
-                    ${category === "personal" ? "bg-blue-100 text-blue-700" : ""}
-                    ${category === "academic" ? "bg-green-100 text-green-700" : ""}
-                    ${category === "client" ? "bg-purple-100 text-purple-700" : ""}
-                    border border-slate-200
+                    ${category === "personal" ? "bg-blue-100 text-blue-700 border-blue-200" : ""}
+                    ${category === "academic" ? "bg-green-100 text-green-700 border-green-200" : ""}
+                    ${category === "client" ? "bg-purple-100 text-purple-700 border-purple-200" : ""}
+                    font-medium
                   `}
                 >
                   {category.charAt(0).toUpperCase() + category.slice(1)}
                 </Badge>
               </div>
               
-              <p className="text-slate-600">{description}</p>
+              <p className="text-slate-600 leading-relaxed">{description}</p>
               
               {/* Project Goal */}
-              <div className="bg-slate-50 p-4 rounded-md">
-                <h4 className="text-md font-medium text-slate-800 mb-2">Project Goal</h4>
-                <p className="text-slate-600 italic">{goal}</p>
+              <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-4 rounded-lg border border-slate-200">
+                <h4 className="text-sm font-semibold text-slate-900 mb-2 uppercase tracking-wide">Project Goal</h4>
+                <p className="text-slate-700 text-sm leading-relaxed italic">{goal}</p>
               </div>
               
               {/* Tech stack */}
               <div>
-                <h4 className="text-md font-medium text-slate-800 mb-2">Technologies Used</h4>
+                <h4 className="text-sm font-semibold text-slate-900 mb-3 uppercase tracking-wide">Technologies Used</h4>
                 <div className="flex flex-wrap gap-2">
                   {techStack.map((tech) => (
                     <Badge 
                       key={tech} 
-                      className="bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200"
+                      className="bg-white/80 text-slate-700 hover:bg-white border-slate-200 font-medium transition-colors"
                     >
                       {tech}
                     </Badge>
@@ -250,10 +281,11 @@ const ProjectCard = ({
               
               {/* Features */}
               <div>
-                <h4 className="text-md font-medium text-slate-800 mb-2">Key Features</h4>
-                <ul className="space-y-1 pl-5">
+                <h4 className="text-sm font-semibold text-slate-900 mb-3 uppercase tracking-wide">Key Features</h4>
+                <ul className="space-y-2">
                   {features.map((feature, index) => (
-                    <li key={index} className="text-slate-600 text-sm relative before:content-['•'] before:absolute before:left-[-1rem] before:text-primary">
+                    <li key={index} className="text-slate-600 text-sm flex items-start leading-relaxed">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                       {feature}
                     </li>
                   ))}
@@ -261,18 +293,20 @@ const ProjectCard = ({
               </div>
               
               {/* Links */}
-              <div className="flex gap-3 pt-2">
+              <div className="flex gap-3 pt-4 border-t border-slate-200">
                 {demoLink && (
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" className="bg-white/80 hover:bg-white border-slate-200" asChild>
                     <a href={demoLink} target="_blank" rel="noopener noreferrer">
-                      <Globe className="mr-1" /> Live Demo
+                      <Globe className="mr-2 h-4 w-4" />
+                      Live Demo
                     </a>
                   </Button>
                 )}
                 {codeLink && (
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" className="bg-white/80 hover:bg-white border-slate-200" asChild>
                     <a href={codeLink} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-1" /> View Code
+                      <Github className="mr-2 h-4 w-4" />
+                      View Code
                     </a>
                   </Button>
                 )}

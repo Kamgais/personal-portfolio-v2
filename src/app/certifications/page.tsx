@@ -1,9 +1,8 @@
-import { Award, Calendar, BookText, BadgeCheck, Filter, MoveLeft } from "lucide-react";
+import { Award, Calendar, BookText, BadgeCheck, Filter, MoveLeft, Clock, Target } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-
 
 interface Certification {
   logo: string;
@@ -16,217 +15,213 @@ interface Certification {
 }
 
 const Certifications = () => {
-  const certifications: Certification[] = [
+  // Currently working on these certifications
+  const upcomingCertifications = [
     {
-      logo: "/aws-certified.png",
-      name: "AWS Certified Solutions Architect",
+      name: "AWS Certified Solutions Architect - Professional",
       issuer: "Amazon Web Services",
-      date: "January 2023",
+      expectedDate: "Q1 2026",
       category: "cloud",
-      credential: "AWS-ASA-00123456",
-      skills: ["Cloud Architecture", "AWS Services", "Infrastructure Design"]
+      skills: ["Advanced AWS Architecture", "Multi-tier Applications", "Cost Optimization"]
     },
     {
-      logo: "/scrum-master.png",
-      name: "Professional Scrum Master I (PSM I)",
-      issuer: "Scrum.org",
-      date: "March 2022",
-      category: "methodology",
-      credential: "PSM-I-123456",
-      skills: ["Agile Methodologies", "Team Management", "Sprint Planning"]
-    },
-    {
-      logo: "/google-cloud.png",
-      name: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      date: "June 2023",
-      category: "cloud",
-      credential: "GCP-PD-123456",
-      skills: ["GCP Services", "Cloud Development", "Containerization"]
-    },
-    {
-      logo: "/react-dev.png",
-      name: "React Developer Certification",
-      issuer: "React Training",
-      date: "October 2022",
-      category: "development",
-      credential: "REACT-DEV-123456",
-      skills: ["React.js", "Redux", "JavaScript", "Frontend Development"]
-    },
-    {
-      logo: "/microsoft-azure.png",
-      name: "Microsoft Azure Fundamentals",
-      issuer: "Microsoft",
-      date: "December 2022",
-      category: "cloud",
-      credential: "AZ-900-123456",
-      skills: ["Azure Services", "Cloud Fundamentals", "Infrastructure as Code"]
-    },
-    {
-      logo: "/cka.png",
-      name: "Certified Kubernetes Administrator",
+      name: "Certified Kubernetes Administrator (CKA)",
       issuer: "Cloud Native Computing Foundation",
-      date: "April 2023",
+      expectedDate: "Q2 2026",
       category: "devops",
-      credential: "CKA-1234-5678-9101",
-      skills: ["Kubernetes", "Container Orchestration", "DevOps"]
+      skills: ["Kubernetes", "Container Orchestration", "Cluster Management"]
     },
+    {
+      name: "Microsoft Azure Developer Associate",
+      issuer: "Microsoft",
+      expectedDate: "Q1 2026",
+      category: "cloud",
+      skills: ["Azure Services", "Cloud Development", "API Management"]
+    },
+    {
+      name: "Google Cloud Professional Cloud Architect",
+      issuer: "Google Cloud Platform",
+      expectedDate: "Q2 2026",
+      category: "cloud",
+      skills: ["GCP Architecture", "Infrastructure Design", "Security Implementation"]
+    }
   ];
 
-  const cloudCertifications = certifications.filter(cert => cert.category === "cloud");
-  const developmentCertifications = certifications.filter(cert => 
-    cert.category === "development" || cert.category === "devops"
-  );
-  const methodologyCertifications = certifications.filter(cert => cert.category === "methodology");
-
   return (
-    <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8 text-sm">
-      <div className="max-w-5xl mx-auto">
-        {/* <div className="flex items-center justify-between mb-8">
-          <h1 className="text-3xl font-bold flex items-center gap-2">
-            <Award className="h-8 w-8 text-purple-500" />
-            Professional Certifications
-          </h1>
-          <Link href="/">
-            <Button variant="outline" size="sm">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Home
-            </Button>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-50 border-b border-white/20 backdrop-blur-lg bg-white/80 shadow-sm">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors group"
+          >
+            <MoveLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            <span className="text-sm font-medium">Back to Home</span>
           </Link>
-        </div> */}
-         <div className="flex items-center justify-between mb-8">
-        <div className="flex items-center">
-          <Link href="/" className="p-2 hover:bg-gray-100 rounded-full transition duration-200">
-            <MoveLeft size={15} />
-          </Link>
-          <h1 className="text-2xl font-bold ml-2">#Certifications</h1>
         </div>
-      </div>
+      </header>
 
-        {/* <EducationNav /> */}
-
-        <div className="mb-8 bg-gray-50 p-6 rounded-lg border border-purple-100">
-          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-700">
-            <BadgeCheck className="h-5 w-5" />
-            About My Certifications
-          </h2>
-          <p className="text-gray-700">
-            Throughout my professional journey, I&apos;ve pursued certifications that enhance my skills and validate my expertise in various domains. 
-            These certifications represent my commitment to continuous learning and professional development in cloud technologies, 
-            software development methodologies, and specialized technical skills.
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-medium mb-6">
+            <Award className="w-4 h-4" />
+            Professional Development
+          </div>
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            Certifications
+          </h1>
+          
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Currently pursuing industry-recognized certifications to validate expertise and 
+            enhance skills in cloud technologies, development practices, and modern software architecture.
           </p>
         </div>
 
-        <Tabs defaultValue="all" className="mb-8">
-          <TabsList className="grid w-full grid-cols-4 mb-8">
-            <TabsTrigger value="all" className="flex items-center gap-2">
-              <Award className="h-4 w-4" />
-              All Certifications
-            </TabsTrigger>
-            <TabsTrigger value="cloud" className="flex items-center gap-2">
-              <BookText className="h-4 w-4" />
-              Cloud
-            </TabsTrigger>
-            <TabsTrigger value="development" className="flex items-center gap-2">
-              <BookText className="h-4 w-4" />
-              Development
-            </TabsTrigger>
-            <TabsTrigger value="methodology" className="flex items-center gap-2">
-              <BookText className="h-4 w-4" />
-              Methodology
-            </TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="all" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {certifications.map((certification, index) => (
-                <CertificationCard key={index} certification={certification} />
-              ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="cloud" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {cloudCertifications.map((certification, index) => (
-                <CertificationCard key={index} certification={certification} />
-              ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="development" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {developmentCertifications.map((certification, index) => (
-                <CertificationCard key={index} certification={certification} />
-              ))}
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="methodology" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {methodologyCertifications.map((certification, index) => (
-                <CertificationCard key={index} certification={certification} />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+        <div className="space-y-8">
+          {/* Coming Soon Section */}
+          <Card className="backdrop-blur-sm bg-white/70 border-white/20 shadow-xl">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-lg bg-blue-100">
+                  <Clock className="h-6 w-6 text-blue-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900">Currently Pursuing</h2>
+                <Badge className="bg-blue-100 text-blue-700 border-blue-200">In Progress</Badge>
+              </div>
+              
+              <p className="text-slate-600 mb-8 leading-relaxed">
+                I'm actively working towards obtaining these professional certifications to deepen my expertise 
+                in cloud architecture, container orchestration, and enterprise-level solution design.
+              </p>
 
-        <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 mb-8">
-          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 text-blue-700">
-            <Filter className="h-5 w-5" />
-            Certification Benefits
-          </h2>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <div className="mr-2 mt-1 text-blue-500">•</div>
-              <div>
-                <span className="font-medium">Industry Recognition</span> - Certifications validate skills and knowledge to potential employers and clients
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {upcomingCertifications.map((cert, index) => (
+                  <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg border-white/20 bg-white/60 backdrop-blur-sm">
+                    <CardHeader className="border-b border-slate-100">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <CardTitle className="text-lg font-semibold text-slate-900 leading-tight mb-2">
+                            {cert.name}
+                          </CardTitle>
+                          <CardDescription className="text-slate-600 font-medium">
+                            {cert.issuer}
+                          </CardDescription>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm">
+                          <Calendar className="h-4 w-4 text-orange-500" />
+                          <span className="text-slate-600 font-medium">{cert.expectedDate}</span>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-6">
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {cert.skills.map((skill, idx) => (
+                          <Badge key={idx} className="bg-white/80 text-slate-700 border-slate-200 font-medium">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-slate-600">
+                        <Target className="h-4 w-4 text-green-500" />
+                        <span>Preparation in progress</span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-            </li>
-            <li className="flex items-start">
-              <div className="mr-2 mt-1 text-blue-500">•</div>
-              <div>
-                <span className="font-medium">Specialized Knowledge</span> - In-depth understanding of specific technologies and methodologies
+            </CardContent>
+          </Card>
+
+          {/* Certification Benefits Section */}
+          <Card className="backdrop-blur-sm bg-white/70 border-white/20 shadow-xl">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-lg bg-green-100">
+                  <BadgeCheck className="h-6 w-6 text-green-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900">Why Certifications Matter</h2>
               </div>
-            </li>
-            <li className="flex items-start">
-              <div className="mr-2 mt-1 text-blue-500">•</div>
-              <div>
-                <span className="font-medium">Career Advancement</span> - Enhanced professional credibility and opportunities for career growth
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="p-6 rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200">
+                  <h3 className="font-semibold text-slate-900 mb-3">Industry Recognition</h3>
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    Certifications validate technical skills and knowledge, providing credibility 
+                    with employers, clients, and peers in the industry.
+                  </p>
+                </div>
+                
+                <div className="p-6 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200">
+                  <h3 className="font-semibold text-slate-900 mb-3">Specialized Expertise</h3>
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    Deep dive into specific technologies and methodologies, ensuring 
+                    comprehensive understanding and practical application skills.
+                  </p>
+                </div>
+                
+                <div className="p-6 rounded-lg bg-gradient-to-br from-purple-50 to-violet-50 border border-purple-200">
+                  <h3 className="font-semibold text-slate-900 mb-3">Career Advancement</h3>
+                  <p className="text-slate-700 text-sm leading-relaxed">
+                    Enhanced professional credibility opens doors to new opportunities 
+                    and demonstrates commitment to continuous learning.
+                  </p>
+                </div>
               </div>
-            </li>
-          </ul>
+            </CardContent>
+          </Card>
+
+          {/* Study Approach Section */}
+          <Card className="backdrop-blur-sm bg-white/70 border-white/20 shadow-xl">
+            <CardContent className="p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 rounded-lg bg-purple-100">
+                  <BookText className="h-6 w-6 text-purple-600" />
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900">My Certification Journey</h2>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-gradient-to-r from-slate-50 to-blue-50 border border-slate-200">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-2">Hands-on Practice</h3>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      Combining theoretical study with practical implementation through labs, 
+                      personal projects, and real-world scenarios to solidify understanding.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-2">Structured Learning Path</h3>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      Following comprehensive study plans that cover all exam objectives 
+                      while building practical skills applicable to real-world projects.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4 p-4 rounded-lg bg-gradient-to-r from-purple-50 to-violet-50 border border-purple-200">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 mb-2">Continuous Updates</h3>
+                    <p className="text-slate-700 text-sm leading-relaxed">
+                      Staying current with the latest technology updates, best practices, 
+                      and industry standards to ensure certifications remain relevant and valuable.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
-  );
-};
-
-const CertificationCard = ({ certification }: { certification: Certification }) => {
-  return (
-    <Card className="transition-all hover:shadow-md">
-      <CardHeader className="flex flex-row items-center gap-4">
-        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100">
-          <Award className="h-6 w-6 text-gray-500" />
-        </div>
-        <div>
-          <CardTitle className="text-lg">{certification.name}</CardTitle>
-          <CardDescription className="flex items-center">
-            <Calendar className="h-3 w-3 mr-1" />{certification.date}
-          </CardDescription>
-        </div>
-      </CardHeader>
-      <CardContent>
-        <div className="font-medium text-gray-600 mb-2">Issued by: {certification.issuer}</div>
-        <div className="text-sm text-gray-500 mb-3">Credential ID: {certification.credential}</div>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {certification.skills.map((skill: string, idx: number) => (
-            <Badge key={idx} variant="secondary" className="bg-green-100 text-green-800">
-              {skill}
-            </Badge>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
   );
 };
 

@@ -1,5 +1,4 @@
-
-import {  Book, Camera, Headphones, Gamepad, Code, Globe, MoveLeft, Lightbulb } from "lucide-react";
+import { Book, Camera, Headphones, Gamepad, Code, Globe, MoveLeft, Lightbulb, User, Heart } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { 
   Carousel,
@@ -11,8 +10,6 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Link from "next/link";
-
-
 
 // Photo data for gallery
 const photos = [
@@ -48,145 +45,223 @@ const photos = [
   }
 ];
 
-const Index = () => {
-
+const About = () => {
   return (
-    <div className="min-h-screen   px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto lg:mt-16 mt-5">
-      {/* Header with back button */}
-      <div className="flex items-center mb-8">
-        <button className="p-2 hover:bg-gray-100 rounded-full transition duration-200">
-          <Link href='/'>
-          <MoveLeft size={15}/> 
-          </Link>
-        </button>
-        <h1 className="text-2xl font-bold ml-2">#About me</h1>
-      </div>
-
-      {/* Greeting section */}
-      <div className="text-center mb-10">
-        <h2 className="text-2xl font-medium mb-10">
-          Hello I&apos;m <span className="text-slate-700 text-3xl">Cyril Kamgais</span>
-          <span className="inline-block ml-2">👋</span>
-        </h2>
-
-        {/* Profile image */}
-        <div className="w-48 h-48 mx-auto mb-10 overflow-hidden rounded-full bg-blue-100 border-4 border-white shadow-xl ring-2 ring-gray-100 ring-opacity-50 transition-all duration-500 hover:shadow-2xl">
-          <img
-            src="/profile-pic.png"
-            alt="Cyril Kamgais"
-            className="w-full h-full object-cover"
-          />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white">
+      {/* Header */}
+      <div className="bg-white/80 backdrop-blur-sm border-b border-slate-200/60 sticky top-0 z-10">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center">
+            <Link 
+              href="/" 
+              className="group flex items-center text-slate-600 hover:text-slate-900 transition-colors duration-200"
+            >
+              <div className="p-2 rounded-full group-hover:bg-slate-100 transition-colors duration-200">
+                <MoveLeft size={18}/>
+              </div>
+              <span className="ml-2 font-medium">Back</span>
+            </Link>
+          </div>
         </div>
       </div>
 
-      {/* About Me Content */}
-      <div className="max-w-2xl mx-auto space-y-8 text-sm text-slate-700">
-        <p className="leading-relaxed">
-          <span className="inline-block mr-1">👋</span> Hey there! I&apos;m Cyril, a curious soul with a passion for creativity and exploration. 
-          When I&apos;m not immersed in the digital world, I find joy in simple pleasures and meaningful connections.
-        </p>
+      {/* Hero Section */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-medium mb-6">
+            <User className="w-4 h-4 mr-2" />
+            About Me
+          </div>
+          <h1 className="text-4xl font-bold text-slate-900 mb-4">
+            Hello, I'm <span className="text-blue-600">Cyril Kamgais</span>
+            <span className="inline-block ml-2 text-3xl">👋</span>
+          </h1>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            A curious soul with a passion for creativity, exploration, and meaningful connections.
+          </p>
+        </div>
+
+        {/* Profile Section */}
+        <div className="relative mb-16">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+            <CardContent className="p-0">
+              {/* Header Section */}
+              <div className="bg-gradient-to-r from-purple-900 to-blue-900 text-white p-8">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-32 h-32 mb-6 overflow-hidden rounded-full bg-white/10 border-4 border-white/20 shadow-2xl backdrop-blur-sm">
+                    <img
+                      src="/profile-pic.png"
+                      alt="Cyril Kamgais"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2 className="text-2xl font-bold mb-2">Cyril Kamgais</h2>
+                  <p className="text-purple-200 text-lg">Software Developer & Creative Thinker</p>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="p-8 space-y-8">
+                {/* Introduction */}
+                <div className="bg-purple-50/50 border border-purple-100 rounded-xl p-6">
+                  <p className="text-slate-700 leading-relaxed text-center">
+                    <span className="inline-block mr-1">👋</span> Hey there! I'm Cyril, a curious soul with a passion for creativity and exploration. 
+                    When I'm not immersed in the digital world, I find joy in simple pleasures and meaningful connections.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
 
         {/* Photo Gallery Section */}
-        <div className="py-6">
-          <h3 className="text-2xl font-medium mb-6 text-slate-800 border-b border-slate-200 pb-2 inline-block">Photo Gallery</h3>
-          
-          <div className="space-y-6">
-            {/* Main Carousel */}
-            <Carousel className="w-full max-w-xl mx-auto"
-             
-            >
-              <CarouselContent>
-                {photos.map((photo) => (
-                  <CarouselItem key={photo.id}>
-                    <Card className="border-none shadow-none">
-                      <CardContent className="p-0">
-                        <AspectRatio ratio={4/3} className="bg-slate-50 rounded-lg overflow-hidden">
-                          <img 
-                            src={photo.src} 
-                            alt={photo.alt}
-                            className="object-cover w-full h-full transition-all duration-300 hover:scale-105"
-                          />
-                        </AspectRatio>
-                        <p className="text-center text-sm text-slate-600 mt-2 italic">{photo.caption}</p>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-2" />
-              <CarouselNext className="right-2" />
-            </Carousel>
-          </div>
+        <div className="mb-16">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-8">
+                <div className="p-2 bg-pink-100 rounded-lg mr-3">
+                  <Camera className="h-5 w-5 text-pink-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">Photo Gallery</h3>
+              </div>
+              
+              <div className="max-w-2xl mx-auto">
+                <Carousel className="w-full">
+                  <CarouselContent>
+                    {photos.map((photo) => (
+                      <CarouselItem key={photo.id}>
+                        <Card className="border-none shadow-none">
+                          <CardContent className="p-0">
+                            <AspectRatio ratio={4/3} className="bg-slate-50 rounded-xl overflow-hidden shadow-md">
+                              <img 
+                                src={photo.src} 
+                                alt={photo.alt}
+                                className="object-cover w-full h-full transition-all duration-300 hover:scale-105"
+                              />
+                            </AspectRatio>
+                            <p className="text-center text-sm text-slate-600 mt-3 font-medium">{photo.caption}</p>
+                          </CardContent>
+                        </Card>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2 bg-white/80 backdrop-blur-sm" />
+                  <CarouselNext className="right-2 bg-white/80 backdrop-blur-sm" />
+                </Carousel>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Hobbies Section */}
-        <div className="py-6">
-          <h3 className="text-2xl font-medium mb-6 text-slate-800 border-b border-slate-200 pb-2 inline-block">My Hobbies</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <HobbyCard icon={<Lightbulb />} title="Ideas" description="💡 Exploring new saas ideas and tech companies out there" />
-          <HobbyCard icon={<Book />} title="Reading" description="📚 Fiction, philosophy, and thought-provoking essays" />
-          <HobbyCard icon={<Camera />} title="Photography" description="📸 Capturing moments and finding beauty in the ordinary" />
-          <HobbyCard icon={<Headphones />} title="Music" description="🎧 From jazz classics to indie discoveries" />
-          <HobbyCard icon={<Gamepad />} title="Gaming" description="🎮 Strategy games and immersive RPGs" />
-          <HobbyCard icon={<Code />} title="Side Projects" description="🛠️ Building fun tools and experimenting with new tech" />
-
-          </div>
+        <div className="mb-16">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-8">
+                <div className="p-2 bg-green-100 rounded-lg mr-3">
+                  <Heart className="h-5 w-5 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">My Hobbies</h3>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <HobbyCard icon={<Lightbulb />} title="Ideas" description="💡 Exploring new saas ideas and tech companies out there" />
+                <HobbyCard icon={<Book />} title="Reading" description="📚 Fiction, philosophy, and thought-provoking essays" />
+                <HobbyCard icon={<Camera />} title="Photography" description="📸 Capturing moments and finding beauty in the ordinary" />
+                <HobbyCard icon={<Headphones />} title="Music" description="🎧 From jazz classics to indie discoveries" />
+                <HobbyCard icon={<Gamepad />} title="Gaming" description="🎮 Strategy games and immersive RPGs" />
+                <HobbyCard icon={<Code />} title="Side Projects" description="🛠️ Building fun tools and experimenting with new tech" />
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* More About Me Section */}
-        <div className="py-6">
-          <h3 className="text-2xl font-medium mb-6 text-slate-800 border-b border-slate-200 pb-2 inline-block">More About Me</h3>
-          <div className="space-y-4">
-            <p className="leading-relaxed">
-              I&apos;m a firm believer in continuous learning and personal growth. Weekends often find me hiking local trails, 
-              experimenting with new recipes, or losing track of time in bookstores.
-            </p>
-            <p className="leading-relaxed">
-              I enjoy meaningful conversations over good food and dream of traveling to experience diverse cultures around the world.
-            </p>
-            <p className="leading-relaxed">
-              My philosophy is simple: stay curious, be kind, and find joy in the journey rather than just the destination.
-            </p>
-          </div>
+        <div className="mb-16">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-8">
+                <div className="p-2 bg-blue-100 rounded-lg mr-3">
+                  <User className="h-5 w-5 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">More About Me</h3>
+              </div>
+              
+              <div className="space-y-6 max-w-3xl">
+                <div className="border-l-4 border-blue-200 pl-6">
+                  <p className="text-slate-700 leading-relaxed">
+                    I'm a firm believer in continuous learning and personal growth. Weekends often find me hiking local trails, 
+                    experimenting with new recipes, or losing track of time in bookstores.
+                  </p>
+                </div>
+                <div className="border-l-4 border-purple-200 pl-6">
+                  <p className="text-slate-700 leading-relaxed">
+                    I enjoy meaningful conversations over good food and dream of traveling to experience diverse cultures around the world.
+                  </p>
+                </div>
+                <div className="border-l-4 border-green-200 pl-6">
+                  <p className="text-slate-700 leading-relaxed">
+                    My philosophy is simple: stay curious, be kind, and find joy in the journey rather than just the destination.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Things I Love Section */}
-        <div className="py-6">
-          <h3 className="text-2xl font-medium mb-6 text-slate-800 border-b border-slate-200 pb-2 inline-block">Things I Love</h3>
-          <div className="flex flex-wrap gap-2">
-            <Badge className="bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-100 py-1.5">Sunrise hikes</Badge>
-            <Badge className="bg-green-50 text-green-700 hover:bg-green-100 border border-green-100 py-1.5">Podcasts</Badge>
-            <Badge className="bg-yellow-50 text-yellow-700 hover:bg-yellow-100 border border-yellow-100 py-1.5">Documentary films</Badge>
-            <Badge className="bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-100 py-1.5">Winter evenings</Badge>
-            <Badge className="bg-red-50 text-red-700 hover:bg-red-100 border border-red-100 py-1.5">Afro music</Badge>
-            <Badge className="bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border border-indigo-100 py-1.5">Street food</Badge>
-            <Badge className="bg-pink-50 text-pink-700 hover:bg-pink-100 border border-pink-100 py-1.5">Art museums</Badge>
-            <Badge className="bg-teal-50 text-teal-700 hover:bg-teal-100 border border-teal-100 py-1.5">Board games</Badge>
-          </div>
+        <div className="mb-16">
+          <Card className="overflow-hidden border-0 shadow-lg bg-white/70 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <div className="flex items-center mb-8">
+                <div className="p-2 bg-red-100 rounded-lg mr-3">
+                  <Heart className="h-5 w-5 text-red-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900">Things I Love</h3>
+              </div>
+              
+              <div className="flex flex-wrap gap-3">
+                <Badge className="bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 hover:from-blue-100 hover:to-blue-200 border border-blue-200 px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200">Sunrise hikes</Badge>
+                <Badge className="bg-gradient-to-r from-green-50 to-green-100 text-green-700 hover:from-green-100 hover:to-green-200 border border-green-200 px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200">Podcasts</Badge>
+                <Badge className="bg-gradient-to-r from-yellow-50 to-yellow-100 text-yellow-700 hover:from-yellow-100 hover:to-yellow-200 border border-yellow-200 px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200">Documentary films</Badge>
+                <Badge className="bg-gradient-to-r from-purple-50 to-purple-100 text-purple-700 hover:from-purple-100 hover:to-purple-200 border border-purple-200 px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200">Winter evenings</Badge>
+                <Badge className="bg-gradient-to-r from-red-50 to-red-100 text-red-700 hover:from-red-100 hover:to-red-200 border border-red-200 px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200">Afro music</Badge>
+                <Badge className="bg-gradient-to-r from-indigo-50 to-indigo-100 text-indigo-700 hover:from-indigo-100 hover:to-indigo-200 border border-indigo-200 px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200">Street food</Badge>
+                <Badge className="bg-gradient-to-r from-pink-50 to-pink-100 text-pink-700 hover:from-pink-100 hover:to-pink-200 border border-pink-200 px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200">Art museums</Badge>
+                <Badge className="bg-gradient-to-r from-teal-50 to-teal-100 text-teal-700 hover:from-teal-100 hover:to-teal-200 border border-teal-200 px-4 py-2 text-sm font-medium shadow-sm transition-all duration-200">Board games</Badge>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Connect Section */}
-        <div className="py-10 text-center">
-          <p className="italic mb-5 text-slate-600">Let&apos;s connect and share stories!</p>
-          <div className="inline-flex items-center px-4 py-2 bg-slate-50 rounded-full border border-slate-200 hover:border-blue-200 hover:bg-blue-50 transition-all duration-300">
-            <Globe className="h-5 w-5 mr-2 text-blue-500" />
-            <span className="text-blue-500 font-medium">cyrilkamgais.com</span>
-          </div>
+        <div className="text-center">
+          <Card className="overflow-hidden border-0 shadow-lg bg-gradient-to-r from-slate-900 to-slate-800">
+            <CardContent className="p-8">
+              <p className="text-slate-300 mb-6 text-lg">Let's connect and share stories!</p>
+              <div className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <Globe className="h-5 w-5 mr-3 text-blue-400" />
+                <span className="text-blue-400 font-medium">cyrilkamgais.com</span>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
   );
 };
 
-// Hobby Card Component
+// Hobby Card Component with modern design
 const HobbyCard = ({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) => {
   return (
-    <div className="bg-slate-50 p-5 rounded-lg border border-slate-100 hover:shadow-md hover:border-slate-200 transition-all duration-300">
-      <div className="text-slate-700 mb-3">{icon}</div>
-      <h4 className="font-medium text-slate-800 mb-1">{title}</h4>
+    <div className="bg-gradient-to-br from-white to-slate-50 p-6 rounded-xl border border-slate-200 hover:shadow-lg hover:border-slate-300 transition-all duration-300 group">
+      <div className="text-slate-600 mb-4 group-hover:text-blue-600 transition-colors duration-300 transform group-hover:scale-110">
+        {icon}
+      </div>
+      <h4 className="font-semibold text-slate-800 mb-2 text-lg">{title}</h4>
       <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
     </div>
   );
 };
 
-export default Index;
+export default About;

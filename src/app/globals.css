@@ -123,11 +123,18 @@
 
 @keyframes marquee {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-250%); }
+  100% { transform: translateX(-100%); }
 }
 
 .animate-marquee {
-  display: inline-flex;
+  display: flex;
   white-space: nowrap;
-  animation: marquee 15s linear infinite;
+  animation: marquee 30s linear infinite;
+  width: fit-content;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
 }

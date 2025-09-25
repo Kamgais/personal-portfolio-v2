@@ -1,7 +1,7 @@
 
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
-import { Tooltip, TooltipContent,  TooltipTrigger } from "../ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 interface SectionProps {
     title: string;
@@ -10,33 +10,34 @@ interface SectionProps {
     moreHref?: string
 }
 
-export default function Section({title,children, moreLink = true, moreHref}: SectionProps) {
+export default function Section({title, children, moreLink = true, moreHref}: SectionProps) {
   return (
-    <div className="flex flex-col gap-5 items-start">
-        <div className="flex justify-between w-full items-center">
-   
-        <h4 className="uppercase border border-gray-300 p-1 text-sm rounded-lg font-bold px-4">{title}</h4>
-
-   {
-    moreLink && (
-      <Tooltip>
-      <TooltipTrigger asChild>
-          <Link href={moreHref!}>
-              <MoveRight size={15}/>
-          </Link>
-      </TooltipTrigger>
-      <TooltipContent>
-      <p>More</p>
-      </TooltipContent>
-  </Tooltip>
-    )
-   }
-
-        </div>
+    <section className="backdrop-blur-sm bg-white/70 border border-white/20 shadow-xl rounded-2xl p-8">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold text-slate-900 capitalize">
+          {title}
+        </h2>
+        
+        {moreLink && (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link 
+                href={moreHref!} 
+                className="inline-flex items-center justify-center w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors group"
+              >
+                <MoveRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>View all {title}</p>
+            </TooltipContent>
+          </Tooltip>
+        )}
+      </div>
       
-      <div className="text-sm w-full overflow-hidden">
+      <div className="space-y-4">
         {children}
       </div>
-    </div>
+    </section>
   )
 }
